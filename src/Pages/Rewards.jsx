@@ -55,7 +55,7 @@ const Rewards = () => {
             ></img>
           </div>
         </div>
-        <div className="px-[17px]">
+        <div className="px-3">
           <div className="py-[8px] text-lg flex justify-between">
             <LightGrayText className="text-bold cursor-pointer">
               Tasks
@@ -70,7 +70,7 @@ const Rewards = () => {
           <div className=" border-2 border-[#666874]"></div>
         </div>
       </header>
-      <section className="body">
+      <section className="body px-2">
         <div className="mx-2  px-1 my-2 rounded-lg bg-[#23262d] h-[400px] w-max-[385px]">
           <div className="flex h-[70px] items-center justify-between">
             <div className="flex items-center my-1">
