@@ -20,7 +20,7 @@ const GradientCard = ({ children, gradientColors }) => {
 
 const Mypick = () => {
   return (
-    <div className="w-8 h-[86px] font-bold text-center justify-center flex items-center rounded-r-2xl bg-[#32CDB3]">
+    <div className="w-8 h-[86px] font-bold text-center justify-center flex items-center rounded-r-2xl  bg-[#32CDB3]">
       <div
         className="vertical-text"
         style={{
@@ -60,7 +60,7 @@ const GradientCardFirm = ({
   rightText,
 }) => (
   <GradientCard gradientColors={gradientColors}>
-    <div className="w-full h-full flex justify-between">
+    <div className="w-full h-full flex justify-between rounded-2xl hover:shadow-cyan-600 hover:shadow-[0_0_20px_4px_rgba(0,0,0,0.5)]">
       <div className="flex p-[15px] justify-between w-full h-full items-center">
         <div className="flex justify-between w-full items-center">
           <div className="flex justify-between gap-2 items-center">
@@ -77,7 +77,7 @@ const GradientCardFirm = ({
               <TextComponent>+{percentage}%</TextComponent>
             </div>
           </div>
-          <div>{rightText}</div>
+          <div className="text-right">{rightText}</div>
         </div>
       </div>
       {mypick}
@@ -113,10 +113,25 @@ const GrayGradientCardFirm = (props) => (
   />
 );
 
+const DarkBrownGradientCardFirm = (props) => (
+  <GradientCardFirm
+    {...props}
+    gradientColors={[
+      "#935824 22.13%",
+      "#A98866 36.13%",
+      "#FFC686 48.08%",
+      "#D6AE75 62.08%",
+      "#927144 82.9%",
+    ]}
+    TextComponent={DarkGrayText}
+  />
+);
+
 export {
   GradientCard,
   BrownGradientCardFirm,
   GrayGradientCardFirm,
   Mypick,
+  DarkBrownGradientCardFirm,
   Blank,
 };

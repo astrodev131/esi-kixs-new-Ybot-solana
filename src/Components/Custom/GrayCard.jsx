@@ -1,8 +1,10 @@
 import React from "react";
 
-const GrayCard = ({ children }) => {
+const GrayCard = ({ children, className }) => {
   return (
-    <div className="bg-gray-200 p-4 rounded-2xl shadow-md w-[95%] mx-auto bg-card bg-opacity-50">
+    <div
+      className={`${className} p-4 rounded-2xl shadow-md  mx-auto bg-card bg-opacity-50`}
+    >
       <div>{children}</div>
     </div>
   );

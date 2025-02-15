@@ -19,6 +19,7 @@ import NewsPage from "../Pages/NewsPage";
 import NewsItemPage from "../Pages/NewsItemPage";
 import Portfolio from "../Pages/Portfolio";
 import EarnNewsPage from "../Pages/EarnNewsPage";
+import Leaderboard from "../Pages/Leaderboard";
 
 export default createBrowserRouter([
   {
@@ -44,7 +45,7 @@ export default createBrowserRouter([
   },
   {
     path: "/earn/news",
-    element: <EarnNewsPage />
+    element: <EarnNewsPage />,
   },
   {
     path: "/daily-bonus",
@@ -92,6 +93,10 @@ export default createBrowserRouter([
   },
   {
     path: "/portfolio",
-    element:<Portfolio/>
-  }
+    element: <Portfolio />,
+  },
+  {
+    path: "/leaderboard",
+    element: <Leaderboard />,
+  },
 ]);

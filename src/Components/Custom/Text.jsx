@@ -25,21 +25,27 @@ const BrownText = ({ children, className = "" }) => {
 
 const CyanText = ({ children, className = "" }) => {
   return (
-    <div className={`text-[#32CDB3] font-semibold text-[30px] ${className}`}>
+    <div
+      className={`text-[#32CDB3] font-semibold  text-[20px] xs:text-[30px] ${className}`}
+    >
       {children}
     </div>
   );
 };
 const RedText = ({ children, className = "" }) => {
   return (
-    <div className={`text-[#E7003E] font-semibold text-[30px] ${className}`}>
+    <div
+      className={`text-[#E7003E] font-semibold  text-[20px] xs:text-[30px] ${className}`}
+    >
       {children}
     </div>
   );
 };
 const WhiteBoldText = ({ children, className = "" }) => {
   return (
-    <div className={`text-white font-extrabold text-[30px] ${className}`}>
+    <div
+      className={`text-white font-extrabold text-[18px] xs:text-[27px] ${className}`}
+    >
       {children}
     </div>
   );

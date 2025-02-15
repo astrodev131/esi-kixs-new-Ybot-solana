@@ -4,6 +4,8 @@ import { LightGrayText, DarkGrayText } from "../Components/Custom/Text";
 import RankCard from "../Components/Rewards/RankCard";
 import AppBar from "../Components/AppBar";
 import Header from "../Components/Header";
+import Devider from "../Components/Devider";
+import GrayCard from "../Components/Custom/GrayCard";
 
 const Rewards = () => {
   const [status, setStatus] = useState("tasks");
@@ -103,24 +105,39 @@ const Rewards = () => {
                   status == "tasks" ? "#AFB1B5" : "#666874"
                 }]`}
               >
-                <Link onClick={() => setStatus("tasks")}>Tasks</Link>
+                <Link
+                  onClick={() => setStatus("tasks")}
+                  className="text-[#383A47] font-bold hover:text-[#C0C2C4]"
+                >
+                  Tasks
+                </Link>
               </span>
               <span
                 className={`text-bold cursor-pointer text-[${
                   status == "tasks" ? "#666874" : "#AFB1B5"
                 }]`}
               >
-                <Link onClick={() => setStatus("ranks")}>Ranks</Link>
+                <Link
+                  className="text-[#383A47] font-bold hover:text-[#C0C2C4]"
+                  onClick={() => setStatus("ranks")}
+                >
+                  Ranks
+                </Link>
               </span>
               <DarkGrayText className="text-bold cursor-pointer">
-                Leaderboard
+                <Link
+                  className="text-[#383A47] font-bold hover:text-[#C0C2C4]"
+                  to="/leaderboard"
+                >
+                  Leaderboard
+                </Link>
               </DarkGrayText>
             </div>
-            <div className=" border-[1px] border-[#666874]"></div>
+            <Devider></Devider>
           </div>
         </header>
-        <section className={`body px-2 ${status === "tasks" ? "" : "hidden"}`}>
-          <div className="mx-2  px-1 my-2 rounded-lg bg-[#23262d] h-[400px] w-max-[385px]">
+        <section className={`body px-4 ${status === "tasks" ? "" : "hidden"}`}>
+          <GrayCard>
             <div className="flex h-[70px] items-center justify-between">
               <div className="flex items-center my-1">
                 <img
@@ -175,8 +192,8 @@ const Rewards = () => {
                 </DarkGrayText>
               </button>
             </div>
-          </div>
-          <div className="mx-2  px-1 my-2 rounded-lg bg-[#23262d]  w-max-[385px]">
+          </GrayCard>
+          <GrayCard className={"mt-4"}>
             <div className="flex h-[70px] items-center justify-between">
               <div className="flex items-center my-1">
                 <img
@@ -221,7 +238,7 @@ const Rewards = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </GrayCard>
         </section>
         <section className={`body px-2 ${status === "ranks" ? "" : "hidden"}`}>
           <div className="mx-2 px-1 my-2">

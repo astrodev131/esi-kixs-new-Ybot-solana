@@ -41,6 +41,7 @@ export default function EarnPage() {
       rank: "#2",
       name: "NOT TON",
       percentage: 100,
+
       imageSrc: "/images/earn/Image.png",
       mypick: <Mypick />,
       rightText: <WhiteBoldText>10X</WhiteBoldText>,
@@ -50,6 +51,7 @@ export default function EarnPage() {
       rank: "#3",
       name: "TRUMP",
       percentage: 100,
+
       imageSrc: "/images/earn/image 11.png",
       mypick: <Blank />,
       rightText: <WhiteBoldText>10X</WhiteBoldText>,
@@ -77,7 +79,6 @@ export default function EarnPage() {
   const mybetgraylist = [
     {
       id: 1,
-
       rank: "#2",
       name: "NOT TON",
       percentage: 100,
@@ -204,9 +205,9 @@ export default function EarnPage() {
   return (
     <div className="page">
       <Header />
-      <main className="main flex items-center justify-center min-h-screen">
+      <main className="main flex items-center p-4 justify-center w-full min-h-screen">
         <div
-          className="w-[95%] py-10 mb-5 px-5 mx-auto"
+          className="w-[95%] py-10 mb-5 mx-auto"
           style={{
             backgroundImage: "url('/images/earn/brownbg.png')",
             backgroundSize: "100% auto",
@@ -221,7 +222,7 @@ export default function EarnPage() {
             +124.77 USDT
           </CyanButton>
         </div>
-        <GrayCard>
+        <GrayCard className={"w-full"}>
           <div>
             <div className="text-xl text-center font-bold">
               Simulation Results

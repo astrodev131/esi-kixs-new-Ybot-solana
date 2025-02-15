@@ -23,6 +23,8 @@ import {
 } from "../constants";
 import Alert from "../Components/Alert";
 import Header from "../Components/Header";
+import Devider from "../Components/Devider";
+import GrayCard from "../Components/Custom/GrayCard";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -215,7 +217,7 @@ function HomePage() {
             <p dangerouslySetInnerHTML={{ __html: currentState.alert }} />
           </div>
         </Alert>
-        <div className="border-b-2 my-4 border-b-[#383a47] w-full">
+        <div className="my-4 w-full">
           <div className="py-2 flex gap-4">
             {HomeData.map((value, index) => (
               <div
@@ -232,19 +234,20 @@ function HomePage() {
             ))}
           </div>
         </div>
+        <Devider></Devider>
         {currentState.title === "Rules" && (
           <div className="text-xl text-center pb-2">
             Meme Coin Arena - Rules 🚀
           </div>
         )}
 
-        <div className="bg-[#21242d] rounded-2xl p-6">
+        <GrayCard className={"px-[30px]"}>
           {currentState.title === "Rules" ? (
             <RulesComponent />
           ) : (
             <PayoutsComponent />
           )}
-        </div>
+        </GrayCard>
       </div>
       <div className="mb-[90px]"></div>
       <AppBar />
