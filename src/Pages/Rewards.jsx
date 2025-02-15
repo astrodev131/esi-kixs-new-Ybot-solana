@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { LightGrayText, DarkGrayText } from "../Components/Custom/Text";
+import AppBar from "../Components/AppBar";
 
 const Rewards = () => {
   const tasks = [
@@ -55,19 +57,19 @@ const Rewards = () => {
             ></img>
           </div>
         </div>
-        <div className="px-3">
-          <div className="py-[8px] text-lg flex justify-between">
+        <div className="px-[17px]">
+          <div className="py-[8px] text-lg flex justify-around">
             <LightGrayText className="text-bold cursor-pointer">
-              Tasks
+              <Link to="/rewards">Tasks</Link>
             </LightGrayText>
             <DarkGrayText className="text-bold cursor-pointer">
-              Achievement
+              <Link to="/rewards/ranks">Ranks</Link>
             </DarkGrayText>
             <DarkGrayText className="text-bold cursor-pointer">
-              Tournaments
+              Leaderboard
             </DarkGrayText>
           </div>
-          <div className=" border-2 border-[#666874]"></div>
+          <div className=" border-[1px] border-[#666874]"></div>
         </div>
       </header>
       <section className="body px-2">
@@ -127,7 +129,7 @@ const Rewards = () => {
             </button>
           </div>
         </div>
-        <div className="mx-2  px-1 my-2 rounded-lg bg-[#23262d] h-[400px] w-max-[385px]">
+        <div className="mx-2  px-1 my-2 rounded-lg bg-[#23262d]  w-max-[385px]">
           <div className="flex h-[70px] items-center justify-between">
             <div className="flex items-center my-1">
               <img
@@ -172,18 +174,9 @@ const Rewards = () => {
               </div>
             </div>
           ))}
-          <div className="text-center px-3">
-            <button
-              type="button"
-              class="w-full inline-block rounded bg-[#2F303E] px-8 pb-2 pt-2.5 uppercase leading-normal border-solid border-[#3F414D] border-2"
-            >
-              <DarkGrayText className="text-[13px] font-bold">
-                View all Tasks
-              </DarkGrayText>
-            </button>
-          </div>
         </div>
       </section>
+      <AppBar />
     </div>
   );
 };
