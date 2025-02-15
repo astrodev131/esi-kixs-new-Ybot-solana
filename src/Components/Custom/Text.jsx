@@ -15,9 +15,22 @@ const BrownLargeText = ({ children, className = "" }) => {
 };
 const BrownText = ({ children, className = "" }) => {
   return (
-    <div className={`text-[#69500D] font-semibold text-[14px] ${className}`}>
+    <div className={`text-[#A37E39] font-semibold text-[14px] ${className}`}>
       {children}
     </div>
   );
 };
-export { LightGrayText, DarkGrayText, BrownLargeText, BrownText };
+const WhiteBoldText = ({ children, className = "" }) => {
+  return (
+    <div className={`text-white font-extrabold text-[34px] ${className}`}>
+      {children}
+    </div>
+  );
+};
+export {
+  LightGrayText,
+  DarkGrayText,
+  BrownLargeText,
+  BrownText,
+  WhiteBoldText,
+};

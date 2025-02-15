@@ -1,5 +1,9 @@
 import CyanButton from "../Components/Custom/Button";
-import { BrownLargeText, BrownText } from "../Components/Custom/Text";
+import {
+  BrownLargeText,
+  BrownText,
+  WhiteBoldText,
+} from "../Components/Custom/Text";
 import GrayCard from "../Components/Custom/GrayCard";
 import React from "react";
 import { BrownGradientCard } from "../Components/Earn/GradientCard";
@@ -80,22 +84,27 @@ export default function EarnPage() {
             </div>
             <div>
               <BrownGradientCard>
-                <div className="flex justify-between">
-                  <div className="flex justify-start">
-                    <div>
-                      <img></img>
-                    </div>
-                    <div>
-                      <div>
-                        <div></div>
-                        <div></div>
+                <div>
+                  <div className="flex justify-between w-full items-center">
+                    <div className="flex justify-start gap-2 items-center">
+                      <div className="w-[60px]">
+                        <img src="/images/earn/image 9.png" alt="Earn Image" />
                       </div>
-                      <div></div>
+                      <div className="flex flex-col justify-between items-stretch gap-2">
+                        <div className="flex justify-around items-center gap-2">
+                          <BrownText className="bg-white p-2 rounded-md">
+                            #1
+                          </BrownText>
+                          <BrownText>BITCOIN</BrownText>
+                        </div>
+                        <BrownText>+10,000%</BrownText>
+                      </div>
+                    </div>
+                    <div>
+                      <WhiteBoldText>100X</WhiteBoldText>
                     </div>
                   </div>
-                  <div>
-                    <div></div>
-                  </div>
+                  <div></div>
                 </div>
               </BrownGradientCard>
             </div>
