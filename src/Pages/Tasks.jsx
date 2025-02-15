@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { LightGrayText, DarkGrayText } from "../Components/Custom/Text";
 import AppBar from "../Components/AppBar";
+import Header from "../Components/Header";
 
 const Tasks = () => {
   const tasks = [
@@ -32,6 +33,7 @@ const Tasks = () => {
   ];
   return (
     <div className="page">
+      <Header/>
       <header className="h-[210px] bg-[#20232C]">
         <img src="/images/rewards/back.png" className="mx-auto mt-[40px]" />
       </header>
