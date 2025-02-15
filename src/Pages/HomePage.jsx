@@ -246,6 +246,7 @@ function HomePage() {
           )}
         </div>
       </div>
+      <div className="mb-[90px]"></div>
       <AppBar />
     </div>
   );

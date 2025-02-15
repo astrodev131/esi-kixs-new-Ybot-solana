@@ -81,6 +81,7 @@ function TradingView() {
             </button>
           </div>
         )}
+        <div className="mb-[90px]"></div>
         <AppBar />
       </main>
     </div>
