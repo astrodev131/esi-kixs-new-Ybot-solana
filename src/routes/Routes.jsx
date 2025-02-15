@@ -17,7 +17,6 @@ import EarnPage from "../Pages/EarnPage";
 import Tasks from "../Pages/Tasks";
 import Portfolio from "../Pages/Portfolio";
 import Trade from "../Pages/Trade";
-import Trade from "../Pages/Trade";
 import HomePage from "../Pages/HomePage";
 import TradingView from "../Pages/TradingView";
 
@@ -25,12 +24,12 @@ import TradingView from "../Pages/TradingView";
 export default createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/home",
     element: <HomePage />,
   },
+  // {
+  //   path: "/home",
+  //   element: <HomePage />,
+  // },
   {
     path: "/earn",
     // element: <Earn />,
