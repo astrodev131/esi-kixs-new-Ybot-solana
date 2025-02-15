@@ -21,6 +21,7 @@ import {
   POINT_PER_FARMING,
   GAME_DATE,
 } from "../constants";
+import Header from "../Components/Header";
 
 function Home() {
   const navigate = useNavigate();
@@ -60,7 +61,7 @@ function Home() {
       setUser(user);
       setRemainTime(FARMING_SECONDS);
       setFarming(user.farming);
-      setInitalized(user.initialized)
+      setInitalized(user.initialized);
       toast.success("Successfully farmed!");
     } catch (e) {
       console.log(e);
@@ -110,6 +111,7 @@ function Home() {
   return (
     <div className="page">
       <main className="main">
+        <Header />
         <div className="p-4 flex justify-between items-center">
           <div className="flex cursor-pointer items-center">
             <div
@@ -268,14 +270,14 @@ function Home() {
                     .hours()
                     ?.toString()
                     .padStart(2, "0")}: ${moment
-                      .duration(remainTime, "seconds")
-                      .minutes()
-                      ?.toString()
-                      .padStart(2, "0")}: ${moment
-                        .duration(remainTime, "seconds")
-                        .seconds()
-                        ?.toString()
-                        .padStart(2, "0")} left`}
+                    .duration(remainTime, "seconds")
+                    .minutes()
+                    ?.toString()
+                    .padStart(2, "0")}: ${moment
+                    .duration(remainTime, "seconds")
+                    .seconds()
+                    ?.toString()
+                    .padStart(2, "0")} left`}
                 </div>
               </div>
               {initialized && (
