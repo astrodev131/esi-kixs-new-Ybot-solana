@@ -1,21 +1,22 @@
-import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import React from "react";
+import { createBrowserRouter } from "react-router-dom";
 
-import Home from '../Pages/Home';
-import Earn from '../Pages/Earn';
-import DailyBonus from '../Pages/DailyBonus';
-import League from '../Pages/League';
-import Account from '../Pages/Account';
-import Friends from '../Pages/Friends';
-import Wallet from '../Pages/Wallet';
-import Store from '../Pages/Store';
-import FlappyBird from '../Pages/FlappyBird';
-import Spin from '../Pages/Spin';
+import Home from "../Pages/Home";
+import Earn from "../Pages/Earn";
+import DailyBonus from "../Pages/DailyBonus";
+import League from "../Pages/League";
+import Account from "../Pages/Account";
+import Friends from "../Pages/Friends";
+import Wallet from "../Pages/Wallet";
+import Store from "../Pages/Store";
+import FlappyBird from "../Pages/FlappyBird";
+import Spin from "../Pages/Spin";
+import Rewards from "../Pages/Rewards";
 
 export default createBrowserRouter([
   {
-    path: '/',
-    element: <Home />
+    path: "/",
+    element: <Home />,
   },
   {
     path: "/earn",
@@ -31,7 +32,7 @@ export default createBrowserRouter([
   },
   {
     path: "/account",
-    element: <Account />
+    element: <Account />,
   },
   {
     path: "/friends",
@@ -43,14 +44,18 @@ export default createBrowserRouter([
   },
   {
     path: "/store",
-    element: <Store />
+    element: <Store />,
   },
   {
     path: "/flappy-bird",
-    element: <FlappyBird />
+    element: <FlappyBird />,
   },
   {
     path: "/spin",
-    element: <Spin />
-  }
+    element: <Spin />,
+  },
+  {
+    path: "/rewards",
+    element: <Rewards />,
+  },
 ]);

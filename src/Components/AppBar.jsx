@@ -10,9 +10,11 @@ function AppBar() {
       <nav className="app-bar-nav flex justify-between  relative py-2 px-6">
         <Link
           to="/"
+
           className={`p-2 flex flex-col justify-center items-center rounded-xl ${getLinkClass(
             "/"
           )} transition-all`}
+
         >
           <img src="/images/appbar/home.png" alt="home logo" width={28} />
           <div className="text-xs mt-1 ">Home</div>
