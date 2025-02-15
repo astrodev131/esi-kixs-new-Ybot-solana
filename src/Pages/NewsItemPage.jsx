@@ -161,6 +161,7 @@ const NewsItemPage = () => {
           )}
         </div>
       </div>
+      <div className="mb-[90px]"></div>
       <AppBar />
     </div>
   );

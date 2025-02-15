@@ -61,7 +61,7 @@ const Rewards = () => {
   ];
   return (
     <div className="page">
-      <main className="min">
+      <main className="main">
         <Header />
         <header className="relative">
           <img
@@ -241,6 +241,7 @@ const Rewards = () => {
             </div>
           </div>
         </section>
+        <div className="mb-[90px]"></div>
         <AppBar />
       </main>
     </div>

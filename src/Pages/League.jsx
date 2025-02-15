@@ -42,7 +42,7 @@ function League() {
                     height: "100px",
                     borderRadius: "30px",
                     marginTop: "130px",
-                    position: 'relative'
+                    position: "relative",
                   }}
                 >
                   <div
@@ -52,9 +52,9 @@ function League() {
                       borderRadius: "30px 30px 0 0",
                       height: "150%",
                       transform: "translateX(-50%)",
-                      position: 'absolute',
-                      left: '50%',
-                      marginTop: '-50px'
+                      position: "absolute",
+                      left: "50%",
+                      marginTop: "-50px",
                     }}
                   >
                     <div className="relative w-full h-full">
@@ -64,10 +64,10 @@ function League() {
                         className="absolute"
                         style={{
                           width: "70%",
-                          top: '-28%',
-                          left: '15%',
-                          border: '3px solid #fcca66',
-                          borderRadius: '50%'
+                          top: "-28%",
+                          left: "15%",
+                          border: "3px solid #fcca66",
+                          borderRadius: "50%",
                         }}
                       />
                       <img
@@ -76,100 +76,120 @@ function League() {
                         className="absolute"
                         style={{
                           width: "100%",
-                          top: '-45%',
+                          top: "-45%",
                         }}
                       />
                     </div>
-                    <div className="text-center mb-2 text-[14px]" style={{ marginTop: '-50%' }}>{userRank[0].username.toUpperCase()}</div>
-                    <div className="text-center flex justify-center items-center gap-1 text-[14px]" style={{ marginTop: '' }}>
+                    <div
+                      className="text-center mb-2 text-[14px]"
+                      style={{ marginTop: "-50%" }}
+                    >
+                      {userRank[0].username.toUpperCase()}
+                    </div>
+                    <div
+                      className="text-center flex justify-center items-center gap-1 text-[14px]"
+                      style={{ marginTop: "" }}
+                    >
                       <img src="/images/y_crystal.png" width={16} />
                       {convert(userRank[0].point)}
                     </div>
                   </div>
-                  {
-                    userRank.length > 1 && (
-                      <div
-                        className="w-1/3"
-                        style={{
-                          height: "150%",
-                          position: 'absolute',
-                          left: '0%',
-                          marginTop: '-50px'
-                        }}
-                      >
-                        <div className="relative w-full h-full">
-                          <img
-                            src={`/images/avatars/${userRank[1].skin_id}.png`}
-                            alt=""
-                            className="absolute"
-                            style={{
-                              width: "50%",
-                              top: '0%',
-                              left: '25%',
-                              border: '3px solid #999',
-                              borderRadius: '50%'
-                            }}
-                          />
-                          <img
-                            src={`/images/league/2.png`}
-                            alt=""
-                            className="absolute"
-                            style={{
-                              width: "100%",
-                              top: '-35%',
-                            }}
-                          />
-                        </div>
-                        <div className="text-center mb-2 text-[14px]" style={{ marginTop: '-45%' }}>{userRank[1].username.toUpperCase()}</div>
-                        <div className="text-center flex justify-center items-center gap-1 text-[14px]" style={{ marginTop: '' }}>
-                          <img src="/images/y_crystal.png" width={16} />
-                          {convert(userRank[1].point)}
-                        </div>
+                  {userRank.length > 1 && (
+                    <div
+                      className="w-1/3"
+                      style={{
+                        height: "150%",
+                        position: "absolute",
+                        left: "0%",
+                        marginTop: "-50px",
+                      }}
+                    >
+                      <div className="relative w-full h-full">
+                        <img
+                          src={`/images/avatars/${userRank[1].skin_id}.png`}
+                          alt=""
+                          className="absolute"
+                          style={{
+                            width: "50%",
+                            top: "0%",
+                            left: "25%",
+                            border: "3px solid #999",
+                            borderRadius: "50%",
+                          }}
+                        />
+                        <img
+                          src={`/images/league/2.png`}
+                          alt=""
+                          className="absolute"
+                          style={{
+                            width: "100%",
+                            top: "-35%",
+                          }}
+                        />
                       </div>
-                    )
-                  }
-                  {
-                    userRank.length > 2 && (
                       <div
-                        className="w-1/3"
-                        style={{
-                          height: "150%",
-                          position: 'absolute',
-                          right: '0%',
-                          marginTop: '-50px'
-                        }}
+                        className="text-center mb-2 text-[14px]"
+                        style={{ marginTop: "-45%" }}
                       >
-                        <div className="relative w-full h-full">
-                          <img
-                            src={`/images/avatars/${userRank[2].skin_id}.png`}
-                            alt=""
-                            className="absolute"
-                            style={{
-                              width: "50%",
-                              top: '0%',
-                              left: '25%',
-                              border: '3px solid #999',
-                              borderRadius: '50%'
-                            }}
-                          />
-                          <img
-                            src={`/images/league/3.png`}
-                            alt=""
-                            className="absolute"
-                            style={{
-                              width: "100%",
-                              top: '-35%',
-                            }}
-                          />
-                        </div>
-                        <div className="text-center mb-2 text-[14px]" style={{ marginTop: '-45%' }}>{userRank[2].username.toUpperCase()}</div>
-                        <div className="text-center flex justify-center items-center gap-1 text-[14px]" style={{ marginTop: '' }}>
-                          <img src="/images/y_crystal.png" width={16} />
-                          {convert(userRank[2].point)}
-                        </div>
+                        {userRank[1].username.toUpperCase()}
                       </div>
-                    )
-                  }
+                      <div
+                        className="text-center flex justify-center items-center gap-1 text-[14px]"
+                        style={{ marginTop: "" }}
+                      >
+                        <img src="/images/y_crystal.png" width={16} />
+                        {convert(userRank[1].point)}
+                      </div>
+                    </div>
+                  )}
+                  {userRank.length > 2 && (
+                    <div
+                      className="w-1/3"
+                      style={{
+                        height: "150%",
+                        position: "absolute",
+                        right: "0%",
+                        marginTop: "-50px",
+                      }}
+                    >
+                      <div className="relative w-full h-full">
+                        <img
+                          src={`/images/avatars/${userRank[2].skin_id}.png`}
+                          alt=""
+                          className="absolute"
+                          style={{
+                            width: "50%",
+                            top: "0%",
+                            left: "25%",
+                            border: "3px solid #999",
+                            borderRadius: "50%",
+                          }}
+                        />
+                        <img
+                          src={`/images/league/3.png`}
+                          alt=""
+                          className="absolute"
+                          style={{
+                            width: "100%",
+                            top: "-35%",
+                          }}
+                        />
+                      </div>
+                      <div
+                        className="text-center mb-2 text-[14px]"
+                        style={{ marginTop: "-45%" }}
+                      >
+                        {userRank[2].username.toUpperCase()}
+                      </div>
+                      <div
+                        className="text-center flex justify-center items-center gap-1 text-[14px]"
+                        style={{ marginTop: "" }}
+                      >
+                        <img src="/images/y_crystal.png" width={16} />
+                        {convert(userRank[2].point)}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
               {userRank.length > 3 && (
@@ -179,8 +199,16 @@ function League() {
                       className={`flex rounded-full justify-between items-center py-2 px-4`}
                       key={`level-users-${index + 4}`}
                       style={{
-                        background: user._id == _user._id ? "linear-gradient(97.91deg, rgba(108, 109, 169, 0.2) 6.1%, rgba(151, 68, 150, 0.2) 103.66%), rgba(29, 29, 29, 0.05)" : (index + 4) % 2 === 1 ? "#333139" : "",
-                        border: user._id == _user._id ? '1px solid rgba(151, 68, 150)' : ''
+                        background:
+                          user._id == _user._id
+                            ? "linear-gradient(97.91deg, rgba(108, 109, 169, 0.2) 6.1%, rgba(151, 68, 150, 0.2) 103.66%), rgba(29, 29, 29, 0.05)"
+                            : (index + 4) % 2 === 1
+                            ? "#333139"
+                            : "",
+                        border:
+                          user._id == _user._id
+                            ? "1px solid rgba(151, 68, 150)"
+                            : "",
                       }}
                     >
                       <div className="flex items-center">
@@ -212,6 +240,7 @@ function League() {
           )}
         </div>
       </main>
+      <div className="mb-[90px]"></div>
       <AppBar />
     </div>
   );
