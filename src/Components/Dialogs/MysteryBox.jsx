@@ -11,7 +11,7 @@ const MysteryBox = ({ quantity, stars, title }) => {
     return (
         <div className="items-center bg-[#18161f] rounded-md p-2 w-1/3 m-2">
             <div className="rounded-lg shadow-md relative justify-items-center">
-                <img src='./images/Frame.png' alt='back' className='absolute' />
+                <img src='./images/Frame.png' alt='back' className='absolute w-full' />
                 <img src={imageUrl} alt={title} className="w-2/3 pt-1" />
                 {title === "Y-crystals" && Images}
             </div>
