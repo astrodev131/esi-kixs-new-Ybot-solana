@@ -32,7 +32,7 @@ const Portfolio = () => {
       <Header />
       <div className="page px-3">
         <div>
-          <div className="flex justify-between text-xl font-bold my-2">
+          <div className="flex justify-between text-xl my-2">
             <div className="flex">
               <LightGrayText className="mr-4">My Picks</LightGrayText>
               <DarkGrayText>Last Trading Day</DarkGrayText>
@@ -64,16 +64,14 @@ const Portfolio = () => {
                 <LightGrayText className="font-bold text-lg">
                   $TRUMP
                 </LightGrayText>
-                <LightGrayText className="font-bold text-sm ">
-                  5 USDT
-                </LightGrayText>
+                <LightGrayText className="text-sm ">5 USDT</LightGrayText>
               </div>
             </div>
           </div>
           <div className="border border-[#666874]"></div>
         </div>
         <div>
-          <div className="flex justify-between text-xl font-bold mt-3 mb-1">
+          <div className="flex justify-between text-xl  mt-3 mb-1">
             <div className="flex">
               <LightGrayText className="mr-4">
                 Most traded meme coins
@@ -109,7 +107,7 @@ const Portfolio = () => {
                     <LightGrayText className="font-bold text-lg">
                       {name}
                     </LightGrayText>
-                    <LightGrayText className="font-bold text-sm">
+                    <LightGrayText className="text-sm">
                       {timeLeft}
                     </LightGrayText>
                   </div>
@@ -128,7 +126,7 @@ const Portfolio = () => {
         <div className="text-center">
           <button
             type="button"
-            className="mt-8 inline-block rounded bg-[#00D083] w-[270px] px-6 py-[21px] text-[20px] font-medium uppercase leading-normal text-white"
+            className="mt-8 inline-block rounded bg-[#00D083] w-[270px] px-6 py-[10px] text-[15px] font-medium uppercase leading-normal text-white"
           >
             start simulation
           </button>
