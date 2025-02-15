@@ -17,8 +17,8 @@ function TradingView() {
         </div>
 
         {/* market status */}
-        <div className=" flex  gap-8 text-white p-4 rounded-lg w-full">
-          <div className="w-2/5">
+        <div className=" flex  xs:gap-8 gap-4 text-white xs:p-4 p-2 rounded-lg w-full">
+          <div className="xs:w-2/5 w-[39%]">
             <div className="flex justify-between items-end mb-3">
               <div>
                 <p className="text-xs text-gray-400">Market price</p>
@@ -27,7 +27,7 @@ function TradingView() {
               <p className="text-sm text-[#710C29]">+1.20%</p>
             </div>
           </div>
-          <div className="flex justify-between w-3/5 items-center mb-3">
+          <div className="flex justify-between xs:w-3/5 w-[60%] items-center mb-3">
             <div>
               <p className="text-xs text-gray-400">Market cap</p>
               <p className="text-sm">20 mil</p>
