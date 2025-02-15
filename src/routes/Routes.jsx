@@ -17,6 +17,7 @@ import EarnPage from "../Pages/EarnPage";
 import Tasks from "../Pages/Tasks";
 import Trade from "../Pages/Trade";
 import HomePage from "../Pages/HomePage";
+import TradingView from "../Pages/TradingView";
 
 export default createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export default createBrowserRouter([
   {
     path: "/trade",
     element: <Trade />,
+  },
+  {
+    path: "/trade/:coin",
+    element: <TradingView />,
   },
   {
     path: "/league",

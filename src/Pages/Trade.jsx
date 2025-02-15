@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../Components/Header";
 import { FaSearch } from "react-icons/fa";
 import AppBar from "../Components/AppBar";
-import CryptoList from "../Components/CryptoList";
+import CryptoList from "../Components/Trade/CryptoList";
 
 function Trade() {
   const [selectedSort, setSelectedSort] = useState(null);
@@ -20,6 +20,7 @@ function Trade() {
   ];
 
   const [activeCategory, setActiveCategory] = useState("All");
+
   return (
     <div className="page">
       <main className="main">
