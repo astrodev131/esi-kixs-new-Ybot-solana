@@ -5,4 +5,4 @@ const LightGrayText = ({ children, className = "" }) => {
 const DarkGrayText = ({ children, className = "" }) => {
   return <span className={`text-[#666874] ${className}`}>{children}</span>;
 };
-export default LightGrayText;
+export { LightGrayText, DarkGrayText };
