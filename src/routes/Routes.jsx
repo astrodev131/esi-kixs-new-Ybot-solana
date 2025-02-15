@@ -100,11 +100,8 @@ export default createBrowserRouter([
     path: "/portfolio",
     element: <Portfolio />,
   },
-<<<<<<< HEAD
   {
     path: "/leaderboard",
     element: <Leaderboard />,
   },
-=======
->>>>>>> 0af95aaae6869651439ad4bc3b36b05e2a72f2ba
 ]);
