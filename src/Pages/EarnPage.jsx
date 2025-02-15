@@ -15,6 +15,9 @@ import {
   GrayGradientCardFirm,
 } from "../Components/Earn/GradientCard";
 import { GradientCard } from "../Components/Earn/GradientCard";
+import Devider from "../Components/Devider";
+import Header from "../Components/Header";
+import AppBar from "../Components/AppBar";
 
 export default function EarnPage() {
   const [activeTab, setActiveTab] = React.useState("winners");
@@ -133,19 +136,74 @@ export default function EarnPage() {
       </>
     ),
     "trading-day-summary": (
-      <GradientCard
-        gradientColors={[
-          "#E8C670 22.13%",
-          "#F1D58F 36.13%",
-          "#E8C670 48.08%",
-          "#FBE3AA 62.08%",
-          "#E8C670 82.9%",
-        ]}
-      ></GradientCard>
+      <div>
+        <GradientCard
+          gradientColors={[
+            "#E8C670 22.13%",
+            "#F1D58F 36.13%",
+            "#E8C670 48.08%",
+            "#FBE3AA 62.08%",
+            "#E8C670 82.9%",
+          ]}
+        >
+          <WhiteBoldText>
+            <div className="flex justify-center items-center p-5 font-bold text-[40px]">
+              NEWS
+            </div>
+          </WhiteBoldText>
+        </GradientCard>
+        <GradientCard
+          gradientColors={[
+            "#AFAFAF 22.13%",
+            "#CBCBCB 36.13%",
+            "#BDBDBD 48.08%",
+            "#F2F2F2 62.08%",
+            "#B5B5B5 82.9%",
+          ]}
+        >
+          <WhiteBoldText>
+            <div className="flex justify-center items-center p-5 font-bold text-[40px]">
+              INFLUENCERS
+            </div>
+          </WhiteBoldText>
+        </GradientCard>
+        <GradientCard
+          gradientColors={[
+            "#935824 22.13%",
+            "#A98866 36.13%",
+            "#FFC686 48.08%",
+            "#D6AE75 62.08%",
+            "#927144 82.9%",
+          ]}
+        >
+          <WhiteBoldText>
+            <div className="flex justify-center items-center p-5 font-bold text-[40px]">
+              X.com
+            </div>
+          </WhiteBoldText>
+        </GradientCard>
+        <GradientCard
+          gradientColors={[
+            "#E8C670 22.13%",
+            "#F1D58F 36.13%",
+            "#E8C670 48.08%",
+            "#FBE3AA 62.08%",
+            "#E8C670 82.9%",
+          ]}
+        >
+          <WhiteBoldText>
+            <div className="flex justify-center items-center p-5 font-bold text-[40px]">
+              WHALES
+            </div>
+          </WhiteBoldText>
+        </GradientCard>
+      </div>
+      /* Rectangle 123 */
     ),
   };
   return (
     <div className="page">
+      <Header />
       <main className="main flex items-center justify-center min-h-screen">
         <div
           className="w-[95%] py-10 mb-5 px-5 mx-auto"
@@ -156,7 +214,9 @@ export default function EarnPage() {
           }}
         >
           <BrownText>Congratulations!</BrownText>
-          <BrownLargeText>You won the bet!</BrownLargeText>
+          <BrownLargeText className="max-w-[70%] ">
+            You won the bet!
+          </BrownLargeText>
           <CyanButton className="ml-5 px-10 py-4 mt-10 rounded-2xl">
             +124.77 USDT
           </CyanButton>
@@ -167,7 +227,7 @@ export default function EarnPage() {
               Simulation Results
             </div>
             <nav>
-              <ul className="flex text-[#383A47] font-bold justify-around">
+              <ul className="flex text-[#383A47] font-bold justify-around max-w-[600px] overflow-x-auto whitespace-nowrap">
                 {["winners", "my-bets", "trading-day-summary"].map((tab) => (
                   <li key={tab} className="px-4 py-2">
                     <a
@@ -183,10 +243,12 @@ export default function EarnPage() {
                 ))}
               </ul>
             </nav>
+            <Devider></Devider>
             <div>{tabContent[activeTab]}</div>
           </div>
         </GrayCard>
       </main>
+      <AppBar></AppBar>
     </div>
   );
 }

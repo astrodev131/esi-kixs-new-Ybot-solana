@@ -37,7 +37,7 @@ const RedText = ({ children, className = "" }) => {
 };
 const WhiteBoldText = ({ children, className = "" }) => {
   return (
-    <div className={`text-white font-extrabold text-[34px] ${className}`}>
+    <div className={`text-white font-extrabold text-[30px] ${className}`}>
       {children}
     </div>
   );
