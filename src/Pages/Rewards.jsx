@@ -93,12 +93,20 @@ const Rewards = () => {
         </div>
         <div className="px-[17px]">
           <div className="py-[8px] text-lg flex justify-around">
-            <LightGrayText className="text-bold cursor-pointer">
+            <span
+              className={`text-bold cursor-pointer text-[${
+                status == "tasks" ? "#AFB1B5" : "#666874"
+              }]`}
+            >
               <Link onClick={() => setStatus("tasks")}>Tasks</Link>
-            </LightGrayText>
-            <DarkGrayText className="text-bold cursor-pointer">
+            </span>
+            <span
+              className={`text-bold cursor-pointer text-[${
+                status == "tasks" ? "#666874" : "#AFB1B5"
+              }]`}
+            >
               <Link onClick={() => setStatus("ranks")}>Ranks</Link>
-            </DarkGrayText>
+            </span>
             <DarkGrayText className="text-bold cursor-pointer">
               Leaderboard
             </DarkGrayText>
@@ -210,7 +218,7 @@ const Rewards = () => {
           ))}
         </div>
       </section>
-      <section className="body px-2">
+      <section className={`body px-2 ${status === "ranks" ? "" : "hidden"}`}>
         <div className="mx-2 px-1 my-2">
           <div className="flex justify-between h-[59px]">
             <LightGrayText className="font-bold text-lg">
