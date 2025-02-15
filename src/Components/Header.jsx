@@ -5,7 +5,7 @@ function Header() {
     <div className="w-full px-4 h-12 text-white flex justify-between items-center border-b-[1px] border-[#FFFFFF1A]">
       <div className="flex items-center gap-2">
         <img
-          src="./images/avatars/2.png"
+          src="/images/avatars/2.png"
           width={36}
           height={36}
           alt="avatar"
@@ -15,7 +15,7 @@ function Header() {
         </div>
       </div>
       <div className="flex items-center">
-        <img src="./images/balance.png" alt="balance"></img>
+        <img src="/images/balance.png" alt="balance"></img>
         <div className="text-xs px-2 pt-[5px] pb-1 text-black border-black rounded-r-xl bg-[#ffc400]">
           0
         </div>
