@@ -21,7 +21,6 @@ import {
   POINT_PER_FARMING,
   GAME_DATE,
 } from "../constants";
-import Alert from "../Components/Alert";
 import Header from "../Components/Header";
 
 function Home() {
@@ -109,142 +108,217 @@ function Home() {
     GAME_DATE[0]?.colors?.gradient || defaultGradient
   );
 
-  const HomeData = [
-    {
-      title: "Rules",
-      alert: "How this game <br /> works",
-    },
-    {
-      title: "Payouts",
-      alert: "Predict which coins <br /> will gain the most",
-    },
-  ];
-
-  const [currentState, setCurrentState] = useState(HomeData[0]);
-
-  const RulesData = [
-    "Simulate Trading Days ⏱️<br/> Simulate a trading day anytime with up to 100x<br/>  payouts for nonstop action!",
-    "Bet on 500 Meme Coins 💰<br/> Wager on the price changes of 500 fictional<br/>  meme coins.",
-    "Market Influences 🌍<br/> Prices move based on news, social media,<br/>  whales, and rumors.",
-    "Top 83 Coins Win 🏆<br/> The top 83 coins get 2x - 100x guaranteed<br/>  payouts!",
-    "50/50 Winners 🎲<br/> Winners are decided by 50% luck and 50% skill!",
-  ];
-
-  const PayoutsData = [
-    {
-      symbol: "#1",
-      description: "Biggest % gain of the day",
-      extra: "100X",
-    },
-    {
-      symbol: "#2-11",
-      description: "Biggest % gain of the day",
-      extra: "10X",
-    },
-    {
-      symbol: "#12-31",
-      description: "Biggest % gain of the day",
-      extra: "5X",
-    },
-    {
-      symbol: "#32-81",
-      description: "Biggest % gain of the day",
-      extra: "2X",
-    },
-  ];
-
-  const RulesComponent = () => {
-    return (
-      <>
-        <ol className="list-decimal pb-3">
-          {RulesData.map((rule, index) => (
-            <li
-              key={index}
-              className="py-3"
-              dangerouslySetInnerHTML={{ __html: rule }}
-            ></li>
-          ))}
-        </ol>
-        <div className="text-center">Good luck and bet wisely! 🍀</div>
-      </>
-    );
-  };
-
-  const PayoutsComponent = () => {
-    return (
-      <>
-        {PayoutsData.map((value, index) => (
-          <div key={index} className="py-4 flex">
-            <img src="./images/payouts.png" alt="" className="w-12 h-12" />
-            <div className="ml-4">
-              <p className="text-lg">{value.symbol}</p>
-              <p className="text-sm text-[#979a92] w-max">
-                {value.description}
-              </p>
-            </div>
-            <div className="w-full">
-              <div className="text-[#32cdb3] text-center text-[45px] font-extrabold">
-                {value.extra}
-              </div>
-            </div>
-          </div>
-        ))}
-        <div className="py-4 flex">
-          <div className="ml-16">
-            <p className="text-sm">#32-81</p>
-            <p className="text-xs text-[#979a92] w-max">
-              Biggest % gain of the day
-            </p>
-          </div>
-          <div className="w-full">
-            <div className="text-[#cd3232] text-center text-[43px] font-extrabold">
-              0X
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  };
-
   return (
     <div className="page">
-      <Header />
-      <div className="py-8 px-4">
-        <Alert>
-          <p dangerouslySetInnerHTML={{ __html: currentState.alert }} />
-        </Alert>
-        <div className="border-b-2 my-4 border-b-[#383a47] w-full">
-          <div className="py-2 flex gap-4">
-            {HomeData.map((value, index) => (
+      <main className="main">
+        <Header />
+        <div className="p-4 flex justify-between items-center">
+          <div className="flex cursor-pointer items-center">
+            <div
+              className="flex text-center items-center gap-2"
+              onClick={() => {
+                navigate("/account");
+              }}
+            >
               <div
-                key={index}
-                onClick={() => setCurrentState(value)}
-                className={`cursor-pointer px-4 ${
-                  value.title === currentState.title
-                    ? "text-[#ffffff]"
-                    : "text-[#545458]"
-                }`}
+                className="relative"
+                style={{ width: "64px", height: "64px" }}
               >
-                {value.title}
+                <img
+                  src={`/images/avatars/${skinId}.png`}
+                  style={{ width: "36px", height: "36px", margin: "14px" }}
+                  alt="avatar"
+                />
+                <img
+                  src={`/images/badgelevels/${level}.png`}
+                  className="absolute top-0"
+                  style={{ width: "64px", height: "64px" }}
+                  alt="badge"
+                />
               </div>
-            ))}
+              <div className="flex flex-col gap-2">
+                <p>{username.toUpperCase()}</p>
+                <div className="flex items-center bg-[#ffffff26] rounded-2xl justify-center">
+                  <img
+                    src={`/images/levels/${level}.png`}
+                    alt="level"
+                    width={24}
+                    style={{ marginLeft: "-4px" }}
+                  />
+                  <p className="text-[12px]">LVL {level}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-[#ffffff26] flex h-[24px] gap-2 rounded-2xl items-center">
+            <img
+              src="/images/mystery_box.png"
+              alt="y token"
+              width={36}
+              height={36}
+            />
+            <div>{mystery_box ?? 0}</div>
+            <img
+              src="/images/add_button.png"
+              alt="add button"
+              width={26}
+              height={26}
+              onClick={() => {
+                navigate("/store");
+              }}
+              className="cursor-pointer"
+            />
           </div>
         </div>
-        {currentState.title === "Rules" && (
-          <div className="text-xl text-center pb-2">
-            Meme Coin Arena - Rules 🚀
-          </div>
-        )}
-
-        <div className="bg-[#21242d] rounded-2xl p-6">
-          {currentState.title === "Rules" ? (
-            <RulesComponent />
+        <div className="mt-4">
+          <UserBalance point={point} />
+        </div>
+        <div className="flex-grow relative h-[500px]">
+          <Swiper
+            slidesPerView={1.3}
+            centeredSlides={true}
+            spaceBetween={0}
+            className="w-full h-full"
+            onSlideChangeTransitionEnd={(swiper) => {
+              const activeSlide = GAME_DATE[swiper.activeIndex];
+              const newGradient =
+                activeSlide?.colors?.gradient || defaultGradient;
+              setAuraGradient(newGradient);
+            }}
+          >
+            {GAME_DATE.map((game, index) => (
+              <SwiperSlide key={index} className="h-full relative">
+                <div
+                  className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                  w-80 h-80 rounded-full ${game.colors.gradient} filter blur-3xl opacity-30`}
+                ></div>
+                <div className="absolute left-1/2 top-1/3 transform -translate-x-1/2">
+                  <div
+                    className="relative flex slider-cadr w-64 h-52 rounded-3xl items-end"
+                    style={{
+                      backgroundImage: `url(${game.backgroundImage})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  >
+                    {game.overlayImagePrimary && (
+                      <img
+                        src={game.overlayImagePrimary}
+                        alt=""
+                        className={game.overlayImagePrimaryClasses}
+                      />
+                    )}
+                    {game.overlayImageSecondary && (
+                      <img
+                        src={game.overlayImageSecondary}
+                        alt=""
+                        className={game.overlayImageSecondaryClasses}
+                      />
+                    )}
+                    <div
+                      className="flex items-center justify-between w-full m-4 bg-[rgba(25,24,29,0.53)] p-2 px-4 rounded-full backdrop-blur-md cursor-pointer"
+                      onClick={() => navigate(game.link)}
+                    >
+                      <h3 className="w-full">{game.title}</h3>
+                      <FaArrowRight size={12} className="text-white" />
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="mx-auto w-[90%]">
+          {!initialized || !farming ? (
+            <button
+              className="button button-primary button-default mb-4"
+              style={{
+                background:
+                  "linear-gradient(97.91deg, rgba(108, 109, 169, 0.2) 6.1%, rgba(151, 68, 150, 0.2) 103.66%), rgba(29, 29, 29, 0.05)",
+              }}
+              onClick={!initialized ? handleInitialize : handleStartFarm}
+            >
+              Tap to start farming
+            </button>
           ) : (
-            <PayoutsComponent />
+            <div>
+              <div
+                className="button progress button-default mx-auto !w-[90%] mb-4 relative !cursor-default overflow-hidden"
+                style={{
+                  background:
+                    "linear-gradient(97.91deg, rgba(108, 109, 169, 0.2) 6.1%, rgba(151, 68, 150, 0.2) 103.66%), rgba(29, 29, 29, 0.05)",
+                }}
+              >
+                <div
+                  className="h-full absolute left-0"
+                  style={{
+                    width: `${100 - (remainTime / FARMING_SECONDS) * 100}%`,
+                    borderRadius: "28px",
+                    background: `linear-gradient(143.15deg, #FF98F2 8.37%, #94A0FF 91.49%)`,
+                  }}
+                ></div>
+              </div>
+              <div className="text-center">
+                <div className="text-sm w-[90%] m-auto font-medium text-[#8b8e93]">
+                  Farming{" "}
+                  {(POINT_PER_FARMING * (boosted ? 2 : 1)).toLocaleString()} /
+                  day
+                </div>
+                <div className="text-sm font-medium text-[#8b8e93]">
+                  {`${moment
+                    .duration(remainTime, "seconds")
+                    .hours()
+                    ?.toString()
+                    .padStart(2, "0")}: ${moment
+                    .duration(remainTime, "seconds")
+                    .minutes()
+                    ?.toString()
+                    .padStart(2, "0")}: ${moment
+                    .duration(remainTime, "seconds")
+                    .seconds()
+                    ?.toString()
+                    .padStart(2, "0")} left`}
+                </div>
+              </div>
+              {initialized && (
+                <div
+                  className={`flex items-center gap-2 text-center justify-center mt-2 cursor-pointer text-[14px]`}
+                  onClick={handleBoost}
+                >
+                  <img src="/images/boosts.png" alt="" width={20} />
+                  Boost Earnings
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </main>
+      <AppBar />
+      <div
+        className="bottom-sheet"
+        style={{ display: isDialogOpen ? "flex" : "none" }}
+      >
+        <div
+          className="bottom-sheet-bg"
+          style={{ touchAction: "none", userSelect: "none" }}
+        />
+        <div className="bottom-sheet-inner">
+          <div
+            className="bottom-sheet-close"
+            onClick={() => {
+              setDialogOpen("");
+            }}
+          >
+            <DeleteIcon />
+          </div>
+          {isDialogOpen && (
+            <FarmingCompleteDialog
+              setDialogOpen={setDialogOpen}
+              handleStartFarm={handleStartFarm}
+            />
           )}
         </div>
       </div>
-      <AppBar />
     </div>
   );
 }
