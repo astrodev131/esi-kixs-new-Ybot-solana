@@ -163,7 +163,7 @@ const Rewards = () => {
           <div className="text-center px-3">
             <button
               type="button"
-              class="w-full inline-block rounded bg-[#2F303E] px-8 pb-2 pt-2.5 uppercase leading-normal border-solid border-[#3F414D] border-2"
+              className="w-full inline-block rounded bg-[#2F303E] px-8 pb-2 pt-2.5 uppercase leading-normal border-solid border-[#3F414D] border-2"
             >
               <DarkGrayText className="text-[13px] font-bold">
                 View all Tasks
