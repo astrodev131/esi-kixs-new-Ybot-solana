@@ -8,7 +8,9 @@ const DarkGrayText = ({ children, className = "" }) => {
 
 const BrownLargeText = ({ children, className = "" }) => {
   return (
-    <div className={`text-[#3F3008] font-bold text-[30px] ${className}`}>
+    <div
+      className={`text-[#3F3008] font-bold  xs:text-[30px] text-[22px] ${className}`}
+    >
       {children}
     </div>
   );

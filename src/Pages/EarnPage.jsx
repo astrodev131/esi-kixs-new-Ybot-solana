@@ -147,7 +147,7 @@ export default function EarnPage() {
           ]}
         >
           <WhiteBoldText>
-            <div className="flex justify-center items-center p-5 font-bold text-[40px]">
+            <div className="flex justify-center items-center p-5 font-bold text-[35px] xs:text-[40px]">
               NEWS
             </div>
           </WhiteBoldText>
@@ -162,7 +162,7 @@ export default function EarnPage() {
           ]}
         >
           <WhiteBoldText>
-            <div className="flex justify-center items-center p-5 font-bold text-[40px]">
+            <div className="flex justify-center items-center p-5 font-bold text-[35px] xs:text-[40px]">
               INFLUENCERS
             </div>
           </WhiteBoldText>
@@ -177,7 +177,7 @@ export default function EarnPage() {
           ]}
         >
           <WhiteBoldText>
-            <div className="flex justify-center items-center p-5 font-bold text-[40px]">
+            <div className="flex justify-center items-center p-5 font-bold text-[35px] xs:text-[40px]">
               X.com
             </div>
           </WhiteBoldText>
@@ -192,7 +192,7 @@ export default function EarnPage() {
           ]}
         >
           <WhiteBoldText>
-            <div className="flex justify-center items-center p-5 font-bold text-[40px]">
+            <div className="flex justify-center items-center p-5 font-bold text-[35px] xs:text-[40px]">
               WHALES
             </div>
           </WhiteBoldText>
@@ -214,10 +214,10 @@ export default function EarnPage() {
           }}
         >
           <BrownText>Congratulations!</BrownText>
-          <BrownLargeText className="max-w-[70%] ">
+          <BrownLargeText className="max-w-[70%]">
             You won the bet!
           </BrownLargeText>
-          <CyanButton className="ml-5 px-10 py-4 mt-10 rounded-2xl">
+          <CyanButton className="ml-5 px-10 py-4 mt-5 xs:mt-10 rounded-2xl">
             +124.77 USDT
           </CyanButton>
         </div>
@@ -248,6 +248,7 @@ export default function EarnPage() {
           </div>
         </GrayCard>
       </main>
+      <div className="mb-[95px]"></div>
       <AppBar></AppBar>
     </div>
   );
