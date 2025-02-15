@@ -14,11 +14,16 @@ import Spin from "../Pages/Spin";
 import Rewards from "../Pages/Rewards";
 import EarnPage from "../Pages/EarnPage";
 import Trade from "../Pages/Trade";
+import HomePage from "../Pages/HomePage";
 
 export default createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/home",
+    element: <HomePage />,
   },
   {
     path: "/earn",
