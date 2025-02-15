@@ -60,7 +60,7 @@ const GradientCardFirm = ({
   rightText,
 }) => (
   <GradientCard gradientColors={gradientColors}>
-    <div className="w-full h-full flex justify-between rounded-2xl hover:shadow-cyan-600 hover:shadow-[0_0_20px_4px_rgba(0,0,0,0.5)]">
+    <div className="w-full h-full flex justify-between rounded-2xl hover:shadow-[#32CDB3] hover:shadow-[0_0_20px_4px_rgba(0,0,0,0.5)]">
       <div className="flex p-[15px] justify-between w-full h-full items-center">
         <div className="flex justify-between w-full items-center">
           <div className="flex justify-between gap-2 items-center">

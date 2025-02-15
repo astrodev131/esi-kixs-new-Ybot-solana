@@ -147,7 +147,7 @@ export default function EarnPage() {
             "#E8C670 82.9%",
           ]}
         >
-          <WhiteBoldText>
+          <WhiteBoldText className="w-full h-full rounded-2xl hover:shadow-[#32CDB3] hover:shadow-[0_0_20px_4px_rgba(0,0,0,0.5)]">
             <div className="flex justify-center items-center p-5 font-bold text-[35px] xs:text-[40px]">
               NEWS
             </div>
@@ -162,7 +162,7 @@ export default function EarnPage() {
             "#B5B5B5 82.9%",
           ]}
         >
-          <WhiteBoldText>
+          <WhiteBoldText className="w-full h-full rounded-2xl hover:shadow-[#32CDB3] hover:shadow-[0_0_20px_4px_rgba(0,0,0,0.5)]">
             <div className="flex justify-center items-center p-5 font-bold text-[35px] xs:text-[40px]">
               INFLUENCERS
             </div>
@@ -177,7 +177,7 @@ export default function EarnPage() {
             "#927144 82.9%",
           ]}
         >
-          <WhiteBoldText>
+          <WhiteBoldText className="w-full h-full rounded-2xl hover:shadow-[#32CDB3] hover:shadow-[0_0_20px_4px_rgba(0,0,0,0.5)]">
             <div className="flex justify-center items-center p-5 font-bold text-[35px] xs:text-[40px]">
               X.com
             </div>
@@ -192,7 +192,7 @@ export default function EarnPage() {
             "#E8C670 82.9%",
           ]}
         >
-          <WhiteBoldText>
+          <WhiteBoldText className="w-full h-full rounded-2xl hover:shadow-[#32CDB3] hover:shadow-[0_0_20px_4px_rgba(0,0,0,0.5)]">
             <div className="flex justify-center items-center p-5 font-bold text-[35px] xs:text-[40px]">
               WHALES
             </div>
