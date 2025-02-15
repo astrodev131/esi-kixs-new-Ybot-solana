@@ -15,6 +15,10 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
 html {
   background-color: #000;
   height: 100%;
@@ -260,7 +264,7 @@ ul {
 }
 
 .app-bar {
-  position: absolute;
+  position: fixed;
   bottom: 0rem !important;
   max-width: 480px;
   width: 100%;

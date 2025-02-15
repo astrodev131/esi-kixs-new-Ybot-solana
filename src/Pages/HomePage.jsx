@@ -211,7 +211,9 @@ function HomePage() {
       <Header />
       <div className="py-8 px-4">
         <Alert>
-          <p dangerouslySetInnerHTML={{ __html: currentState.alert }} />
+          <div className="text-2xl font-semibold text-[#3f3008]">
+            <p dangerouslySetInnerHTML={{ __html: currentState.alert }} />
+          </div>
         </Alert>
         <div className="border-b-2 my-4 border-b-[#383a47] w-full">
           <div className="py-2 flex gap-4">

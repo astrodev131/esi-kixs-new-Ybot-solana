@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Home from "../Pages/Home";
 import Earn from "../Pages/Earn";
+import Ranks from "../Pages/Ranks";
 import DailyBonus from "../Pages/DailyBonus";
 import League from "../Pages/League";
 import Account from "../Pages/Account";
@@ -14,21 +15,28 @@ import Spin from "../Pages/Spin";
 import Rewards from "../Pages/Rewards";
 import EarnPage from "../Pages/EarnPage";
 import Tasks from "../Pages/Tasks";
-import Portfolio from "../Pages/Portfolio";
 import Trade from "../Pages/Trade";
 import HomePage from "../Pages/HomePage";
-import TradingView from "../Pages/TradingView";
-
+import NewsPage from "../Pages/NewsPage";
+import NewsItemPage from "../Pages/NewsItemPage";
 
 export default createBrowserRouter([
+  {
+    path: "/home",
+    element: <Home />,
+  },
   {
     path: "/",
     element: <HomePage />,
   },
-  // {
-  //   path: "/home",
-  //   element: <HomePage />,
-  // },
+  {
+    path: "/news",
+    element: <NewsPage />
+  },
+  {
+    path: "/news/:newsId",
+    element: <NewsItemPage />
+  },
   {
     path: "/earn",
     // element: <Earn />,
@@ -41,10 +49,6 @@ export default createBrowserRouter([
   {
     path: "/trade",
     element: <Trade />,
-  },
-  {
-    path: "/trade/:coin",
-    element: <TradingView />,
   },
   {
     path: "/league",
@@ -79,13 +83,11 @@ export default createBrowserRouter([
     element: <Rewards />,
   },
   {
+    path: "/rewards/ranks",
+    element: <Ranks />,
+  },
+  {
     path: "/rewards/tasks",
     element: <Tasks />,
   },
-
-  {
-    path: "/portfolio",
-    element: <Portfolio/>,
-  },
-
 ]);

@@ -10,11 +10,9 @@ const Alert = ({ children }) => {
                 <DeleteIcon />
             </div>
             <div className="absolute right-0 top-0">
-                <img src="./images/modal_image.png" alt="" />
+                <img src="/images/modal_image.png" alt="" />
             </div>
-            <div className='text-2xl font-semibold text-[#3f3008]'>
-                {children}
-            </div>
+            {children}
         </div>
     )
 }
