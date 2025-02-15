@@ -14,6 +14,7 @@ import Spin from "../Pages/Spin";
 import Rewards from "../Pages/Rewards";
 import Ranks from "../Pages/Ranks";
 import EarnPage from "../Pages/EarnPage";
+import Tasks from "../Pages/Tasks";
 
 
 export default createBrowserRouter([
@@ -68,6 +69,6 @@ export default createBrowserRouter([
   },
   {
     path: "/rewards/tasks",
-    element: <Ranks />,
+    element: <Tasks />,
   },
 ]);
