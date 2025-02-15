@@ -17,15 +17,25 @@ import EarnPage from "../Pages/EarnPage";
 import Tasks from "../Pages/Tasks";
 import Trade from "../Pages/Trade";
 import HomePage from "../Pages/HomePage";
+import NewsPage from "../Pages/NewsPage";
+import NewsItemPage from "../Pages/NewsItemPage";
 
 export default createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <Home />,
   },
   {
-    path: "/home",
+    path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "/news",
+    element: <NewsPage />
+  },
+  {
+    path: "/news/:newsId",
+    element: <NewsItemPage />
   },
   {
     path: "/earn",
