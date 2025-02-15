@@ -15,8 +15,13 @@ function Header() {
         </div>
       </div>
       <div className="flex items-center">
-        <img src="/images/balance.png" alt="balance"></img>
-        <div className="text-xs px-2 pt-[5px] pb-1 text-black border-black rounded-r-xl bg-[#ffc400]">
+        <img
+          src="/images/balance.png"
+          alt="balance"
+          height={28}
+          width={28}
+        ></img>
+        <div className="text-sm pr-2 pl-1 py-1 text-black border-black rounded-r-2xl bg-[#ffc400]">
           0
         </div>
       </div>

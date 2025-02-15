@@ -17,6 +17,7 @@ import Trade from "../Pages/Trade";
 import HomePage from "../Pages/HomePage";
 import NewsPage from "../Pages/NewsPage";
 import NewsItemPage from "../Pages/NewsItemPage";
+import Portfolio from "../Pages/Portfolio";
 
 export default createBrowserRouter([
   {
@@ -84,4 +85,8 @@ export default createBrowserRouter([
     path: "/rewards/tasks",
     element: <Tasks />,
   },
+  {
+    path: "/portfolio",
+    element:<Portfolio/>
+  }
 ]);
