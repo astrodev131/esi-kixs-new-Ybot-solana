@@ -12,15 +12,21 @@ import Store from "../Pages/Store";
 import FlappyBird from "../Pages/FlappyBird";
 import Spin from "../Pages/Spin";
 import Rewards from "../Pages/Rewards";
-import Ranks from "../Pages/Ranks";
 import EarnPage from "../Pages/EarnPage";
 import Tasks from "../Pages/Tasks";
+
+import Trade from "../Pages/Trade";
+import HomePage from "../Pages/HomePage";
 
 
 export default createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/home",
+    element: <HomePage />,
   },
   {
     path: "/earn",
@@ -30,6 +36,10 @@ export default createBrowserRouter([
   {
     path: "/daily-bonus",
     element: <DailyBonus />,
+  },
+  {
+    path: "/trade",
+    element: <Trade />,
   },
   {
     path: "/league",
@@ -71,4 +81,5 @@ export default createBrowserRouter([
     path: "/rewards/tasks",
     element: <Tasks />,
   },
+
 ]);
