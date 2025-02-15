@@ -20,7 +20,7 @@ export default function TelegramApp() {
     checkTGApp();
   }, []);
 
-  return !isTGApp ? (
+  return isTGApp ? (
     <PointContextProvider>
       <div>
         <RouterProvider router={appRouter} />
