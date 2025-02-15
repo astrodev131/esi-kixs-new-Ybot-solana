@@ -176,16 +176,16 @@ function HomePage() {
     return (
       <>
         {PayoutsData.map((value, index) => (
-          <div key={index} className="py-4 flex">
+          <div key={index} className="py-4 flex items-center">
             <img src="./images/payouts.png" alt="" className="w-12 h-12" />
             <div className="ml-4">
               <p className="text-lg">{value.symbol}</p>
-              <p className="text-sm text-[#979a92] w-max">
+              <p className="text-sm text-[#979a92] xxs:w-max">
                 {value.description}
               </p>
             </div>
-            <div className="w-full">
-              <div className="text-[#32cdb3] text-center text-[45px] font-extrabold">
+            <div className="w-full place-content-center">
+              <div className="text-[#32cdb3] text-center text-[24px] xxs:text-[45px] font-extrabold">
                 {value.extra}
               </div>
             </div>
@@ -194,12 +194,12 @@ function HomePage() {
         <div className="py-4 flex">
           <div className="ml-16">
             <p className="text-sm">#32-81</p>
-            <p className="text-xs text-[#979a92] w-max">
+            <p className="text-xs text-[#979a92] xxs:w-max">
               Biggest % gain of the day
             </p>
           </div>
           <div className="w-full">
-            <div className="text-[#cd3232] text-center text-[43px] font-extrabold">
+            <div className="text-[#cd3232] text-[24px] xxs:text-[43px] text-center font-extrabold">
               0X
             </div>
           </div>
@@ -249,7 +249,6 @@ function HomePage() {
           )}
         </GrayCard>
       </div>
-      <div className="mb-[90px]"></div>
       <AppBar />
     </div>
   );
