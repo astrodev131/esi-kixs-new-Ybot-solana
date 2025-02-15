@@ -40,7 +40,7 @@ body {
   font-style: normal;
   color: #fff;
   cursor: default;
-  font-family: Inter, sans-serif;
+  font-family: Roboto Flex, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
@@ -261,8 +261,7 @@ ul {
 }
 
 .app-bar {
-  position: absolute;
-  bottom: 0rem;
+  bottom: 1rem;
   max-width: 480px;
   width: 100%;
 }
