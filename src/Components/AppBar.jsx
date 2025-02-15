@@ -27,13 +27,13 @@ function AppBar() {
           <img src="/images/appbar/task.png" alt="rewards logo" width={28} />
           <div className="text-xs mt-1">Rewards</div>
         </Link>
-        <Link to="/store" className={`${getLinkClass("/store")}`}>
+        <Link to="/trade" className={`${getLinkClass("/trade")}`}>
           <img
             src="/images/appbar/store.png"
             alt="store logo"
             className={`rounded-full absolute w-[64px] !h-[64px]  left-[51%] -translate-x-1/2 -translate-y-1/2 `}
           />
-          <div className="mt-10">Store</div>
+          <div className="mt-10">Trade</div>
         </Link>
         <Link
           to="/earn"
