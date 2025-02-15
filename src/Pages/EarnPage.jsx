@@ -6,23 +6,84 @@ import {
 } from "../Components/Custom/Text";
 import GrayCard from "../Components/Custom/GrayCard";
 import React from "react";
-import { Blank, Mypick } from "../Components/Earn/GradientCard";
 import {
+  Blank,
   BrownGradientCardFirm,
+  Mypick,
   GrayGradientCardFirm,
 } from "../Components/Earn/GradientCard";
-import {} from "../Components/Earn/GradientCard";
+
 export default function EarnPage() {
-  const [activeTab, setActiveTab] = React.useState("");
+  const [activeTab, setActiveTab] = React.useState("winners");
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
+  const winnerbrownlist = [
+    {
+      id: 1,
+      rank: "#1",
+      name: "BITCOIN",
+      percentage: "10,000",
+      imageSrc: "/images/earn/image 9.png",
+      mypick: <Mypick />,
+      rightText: <WhiteBoldText>100X</WhiteBoldText>,
+    },
+  ];
+
+  const winnergraylist = [
+    {
+      id: 1,
+
+      rank: "#2",
+      name: "NOT TON",
+      percentage: 100,
+      imageSrc: "/images/earn/Image.png",
+      mypick: <Mypick />,
+      rightText: <WhiteBoldText>10X</WhiteBoldText>,
+    },
+    {
+      id: 2,
+      rank: "#3",
+      name: "TRUMP",
+      percentage: 100,
+      imageSrc: "/images/earn/image 11.png",
+      mypick: <Blank />,
+      rightText: <WhiteBoldText>10X</WhiteBoldText>,
+    },
+  ];
+  const mybetgraylist = [
+    {
+      id: 1,
+      rank: "#2",
+      name: "NOT TON",
+      percentage: 100,
+      imageSrc: "/images/earn/Image.png",
+      mypick: <Mypick />,
+      rightText: <WhiteBoldText>10X</WhiteBoldText>,
+    },
+  ];
+
+  const tabContent = {
+    winners: (
+      <>
+        {winnerbrownlist.map((card, index) => (
+          <BrownGradientCardFirm key={index} {...card} />
+        ))}
+        {winnergraylist.map((card, index) => (
+          <GrayGradientCardFirm key={index} {...card} />
+        ))}
+      </>
+    ),
+    "my-bets": (
+      <>
+        {mybetgraylist.map((card, index) => (
+          <BrownGradientCardFirm key={index} {...card} />
+        ))}
+        {winnergraylist.map((card, index) => (
+          <GrayGradientCardFirm key={index} {...card} />
+        ))}
+      </>
+    ),
+    "trading-day-summary": <div>asdfasdfasdfsdf</div>,
   };
-
-  React.useEffect(() => {
-    setActiveTab("winners");
-  }, []);
-
   return (
     <div className="page">
       <main className="main flex items-center justify-center min-h-screen">
@@ -54,7 +115,7 @@ export default function EarnPage() {
                       className={`hover:text-[#C0C2C4] ${
                         activeTab === tab ? "text-[#C0C2C4]" : ""
                       }`}
-                      onClick={() => handleTabClick(tab)}
+                      onClick={() => setActiveTab(tab)}
                     >
                       <div>{tab.replace(/-/g, " ")}</div>
                     </a>
@@ -62,52 +123,7 @@ export default function EarnPage() {
                 ))}
               </ul>
             </nav>
-            <div>
-              {[
-                {
-                  rank: "#1",
-                  name: "BITCOIN",
-                  percentage: "10,000",
-                  multiplier: 100,
-                  imageSrc: "/images/earn/image 9.png",
-                  mypick: <Mypick />,
-                },
-                {
-                  rank: "#2",
-                  name: "NOT TON",
-                  percentage: 100,
-                  multiplier: 10,
-                  imageSrc: "/images/earn/Image.png",
-                  mypick: <Mypick />,
-                },
-                {
-                  rank: "#3",
-                  name: "TRUMP",
-                  percentage: 100,
-                  multiplier: 10,
-                  imageSrc: "/images/earn/image 11.png",
-                  mypick: <Blank />,
-                },
-                {
-                  rank: "#4",
-                  name: "ELON",
-                  percentage: 100,
-                  multiplier: 10,
-                  imageSrc: "/images/earn/image 10.png",
-                  mypick: <Mypick />,
-                },
-                {
-                  rank: "#5",
-                  name: "TATE",
-                  percentage: 100,
-                  multiplier: 10,
-                  imageSrc: "/images/earn/image 12.png",
-                  mypick: <Blank />,
-                },
-              ].map((card, index) => (
-                <GrayGradientCardFirm key={index} {...card} />
-              ))}
-            </div>
+            <div>{tabContent[activeTab]}</div>
           </div>
         </GrayCard>
       </main>

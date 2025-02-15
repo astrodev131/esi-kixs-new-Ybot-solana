@@ -20,6 +20,21 @@ const BrownText = ({ children, className = "" }) => {
     </div>
   );
 };
+
+const RightCyanTextComponent = ({ children, className = "" }) => {
+  return (
+    <div className={`text-[#32CDB3] font-semibold text-[14px] ${className}`}>
+      {children}
+    </div>
+  );
+};
+const RightRedTextComponent = ({ children, className = "" }) => {
+  return (
+    <div className={`text-[#E7003E] font-semibold text-[14px] ${className}`}>
+      {children}
+    </div>
+  );
+};
 const WhiteBoldText = ({ children, className = "" }) => {
   return (
     <div className={`text-white font-extrabold text-[34px] ${className}`}>
@@ -33,4 +48,6 @@ export {
   BrownLargeText,
   BrownText,
   WhiteBoldText,
+  RightRedTextComponent,
+  RightCyanTextComponent,
 };

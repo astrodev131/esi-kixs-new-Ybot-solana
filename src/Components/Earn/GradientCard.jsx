@@ -1,7 +1,7 @@
 import React from "react";
-import { BrownText, DarkGrayText, WhiteBoldText } from "../Custom/Text";
+import { BrownText, DarkGrayText } from "../Custom/Text";
 
-const BrownGradientCard = ({ children }) => {
+const GradientCard = ({ children, gradientColors }) => {
   return (
     <div
       style={{
@@ -9,26 +9,7 @@ const BrownGradientCard = ({ children }) => {
         width: "100%",
         height: "86px",
         alignItems: "center",
-        background:
-          "linear-gradient(239.25deg, #E8C670 22.13%, #F1D58F 36.13%, #E8C670 48.08%, #FBE3AA 62.08%, #E8C670 82.9%)",
-        borderRadius: "14px",
-      }}
-    >
-      {children}
-    </div>
-  );
-};
-
-const GrayGradientCard = ({ children }) => {
-  return (
-    <div
-      style={{
-        marginTop: "20px",
-        width: "100%",
-        height: "86px",
-        alignItems: "center",
-        background:
-          "linear-gradient(239.25deg, #AFAFAF 22.13%, #CBCBCB 36.13%, #BDBDBD 48.08%, #F2F2F2 62.08%, #B5B5B5 82.9%)",
+        background: `linear-gradient(239.25deg, ${gradientColors.join(", ")})`,
         borderRadius: "14px",
       }}
     >
@@ -52,6 +33,7 @@ const Mypick = () => {
     </div>
   );
 };
+
 const Blank = () => {
   return (
     <div className="w-8 h-[86px] font-bold text-center justify-center flex items-center rounded-r-2xl">
@@ -66,15 +48,18 @@ const Blank = () => {
   );
 };
 
-const BrownGradientCardFirm = ({
+const GradientCardFirm = ({
   rank,
   name,
   percentage,
   multiplier,
   imageSrc,
   mypick,
+  gradientColors,
+  TextComponent,
+  rightText,
 }) => (
-  <BrownGradientCard>
+  <GradientCard gradientColors={gradientColors}>
     <div className="w-full h-full flex justify-between">
       <div className="flex p-[15px] justify-between w-full h-full items-center">
         <div className="flex justify-between w-full items-center">
@@ -84,62 +69,52 @@ const BrownGradientCardFirm = ({
             </div>
             <div className="flex flex-col justify-between items-stretch gap-2">
               <div className="flex justify-around items-center gap-2">
-                <BrownText className="bg-white p-1 rounded-md">
+                <TextComponent className="bg-white p-1 rounded-md">
                   {rank}
-                </BrownText>
-                <BrownText>{name}</BrownText>
+                </TextComponent>
+                <TextComponent>{name}</TextComponent>
               </div>
-              <BrownText>+{percentage}%</BrownText>
+              <TextComponent>+{percentage}%</TextComponent>
             </div>
           </div>
-          <div>
-            <WhiteBoldText>{multiplier}X</WhiteBoldText>
-          </div>
+          <div>{rightText}</div>
         </div>
       </div>
       {mypick}
     </div>
-  </BrownGradientCard>
+  </GradientCard>
 );
 
-const GrayGradientCardFirm = ({
-  rank,
-  name,
-  percentage,
-  multiplier,
-  imageSrc,
-  mypick,
-}) => (
-  <GrayGradientCard>
-    <div className="w-full h-full flex justify-between">
-      <div className="flex p-[15px] justify-between w-full h-full items-center">
-        <div className="flex justify-between w-full items-center">
-          <div className="flex justify-between gap-2 items-center">
-            <div className="w-[60px]">
-              <img src={imageSrc} alt={name} />
-            </div>
-            <div className="flex flex-col justify-between items-stretch gap-2">
-              <div className="flex justify-around items-center gap-2">
-                <DarkGrayText className="bg-white p-1 font-bold rounded-md">
-                  {rank}
-                </DarkGrayText>
-                <DarkGrayText className="font-bold">{name}</DarkGrayText>
-              </div>
-              <DarkGrayText className="font-bold">+{percentage}%</DarkGrayText>
-            </div>
-          </div>
-          <div>
-            <WhiteBoldText>{multiplier}X</WhiteBoldText>
-          </div>
-        </div>
-      </div>
-      {mypick}
-    </div>
-  </GrayGradientCard>
+const BrownGradientCardFirm = (props) => (
+  <GradientCardFirm
+    {...props}
+    gradientColors={[
+      "#E8C670 22.13%",
+      "#F1D58F 36.13%",
+      "#E8C670 48.08%",
+      "#FBE3AA 62.08%",
+      "#E8C670 82.9%",
+    ]}
+    TextComponent={BrownText}
+  />
 );
+
+const GrayGradientCardFirm = (props) => (
+  <GradientCardFirm
+    {...props}
+    gradientColors={[
+      "#AFAFAF 22.13%",
+      "#CBCBCB 36.13%",
+      "#BDBDBD 48.08%",
+      "#F2F2F2 62.08%",
+      "#B5B5B5 82.9%",
+    ]}
+    TextComponent={DarkGrayText}
+  />
+);
+
 export {
-  BrownGradientCard,
-  GrayGradientCard,
+  GradientCard,
   BrownGradientCardFirm,
   GrayGradientCardFirm,
   Mypick,
