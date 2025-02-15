@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { LightGrayText, DarkGrayText } from "../Components/Custom/Text";
+import Alert from "../Components/Alert";
 import AppBar from "../Components/AppBar";
 import Header from "../Components/Header";
 
@@ -31,7 +32,16 @@ const Portfolio = () => {
     <div className="page">
       <main className="main">
         <Header />
+
         <div className="px-3">
+          <Alert>
+            <div className="text-[17px] mb-[22px] w-[162px] font-semibold text-[#3f3008]">
+              Trade To Earn Intuition Points
+            </div>
+            <div className="text-[13px] mt-[11px] text-[#615229]">
+              Get Higher Payouts
+            </div>
+          </Alert>
           <div>
             <div className="flex justify-between text-xl my-2">
               <div className="flex">
