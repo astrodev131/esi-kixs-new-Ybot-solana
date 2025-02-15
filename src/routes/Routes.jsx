@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Home from "../Pages/Home";
 import Earn from "../Pages/Earn";
+import Ranks from "../Pages/Ranks";
 import DailyBonus from "../Pages/DailyBonus";
 import League from "../Pages/League";
 import Account from "../Pages/Account";
@@ -15,9 +16,11 @@ import Rewards from "../Pages/Rewards";
 import EarnPage from "../Pages/EarnPage";
 import Tasks from "../Pages/Tasks";
 import Portfolio from "../Pages/Portfolio";
-
+import Trade from "../Pages/Trade";
 import Trade from "../Pages/Trade";
 import HomePage from "../Pages/HomePage";
+import TradingView from "../Pages/TradingView";
+
 
 export default createBrowserRouter([
   {
@@ -40,6 +43,10 @@ export default createBrowserRouter([
   {
     path: "/trade",
     element: <Trade />,
+  },
+  {
+    path: "/trade/:coin",
+    element: <TradingView />,
   },
   {
     path: "/league",
@@ -77,8 +84,10 @@ export default createBrowserRouter([
     path: "/rewards/tasks",
     element: <Tasks />,
   },
+
   {
     path: "/portfolio",
     element: <Portfolio/>,
   },
+
 ]);
