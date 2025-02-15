@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import RankCard from "../Components/Rewards/RankCard";
 import { LightGrayText, DarkGrayText } from "../Components/Custom/Text";
 import AppBar from "../Components/AppBar";
+import Header from "../Components/Header";
 
 const Ranks = () => {
   const ranks = [
@@ -38,6 +39,7 @@ const Ranks = () => {
 
   return (
     <div className="page">
+      <Header/>
       <header className="relative">
         <img
           className="absolute w-[27px] h-[27px] top-[99px] left-[92px]"

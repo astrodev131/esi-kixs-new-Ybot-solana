@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { LightGrayText, DarkGrayText } from "../Components/Custom/Text";
+import RankCard from "../Components/Rewards/RankCard";
 import AppBar from "../Components/AppBar";
+import Header from "../Components/Header";
 
 const Rewards = () => {
+  const [status, setStatus] = useState("tasks");
   const tasks = [
     {
       id: 1,
@@ -26,8 +29,39 @@ const Rewards = () => {
       value: "10",
     },
   ];
+  const ranks = [
+    {
+      id: 1,
+      title: "Trader",
+      rp: "10.000 RP",
+      bonus: "+5% probability bonus",
+      img: "/images/rewards/animal1.png",
+    },
+    {
+      id: 2,
+      title: "Master",
+      rp: "20.000 RP",
+      bonus: "+5% probability bonus",
+      img: "/images/rewards/animal2.png",
+    },
+    {
+      id: 3,
+      title: "Master",
+      rp: "20.000 RP",
+      bonus: "+5% probability bonus",
+      img: "/images/rewards/animal3.png",
+    },
+    {
+      id: 4,
+      title: "Master",
+      rp: "20.000 RP",
+      bonus: "+5% probability bonus",
+      img: "/images/rewards/animal4.png",
+    },
+  ];
   return (
     <div className="page">
+      <Header />
       <header className="relative">
         <img
           className="absolute w-[27px] h-[27px] top-[99px] left-[92px]"
@@ -60,10 +94,10 @@ const Rewards = () => {
         <div className="px-[17px]">
           <div className="py-[8px] text-lg flex justify-around">
             <LightGrayText className="text-bold cursor-pointer">
-              <Link to="/rewards">Tasks</Link>
+              <Link onClick={() => setStatus("tasks")}>Tasks</Link>
             </LightGrayText>
             <DarkGrayText className="text-bold cursor-pointer">
-              <Link to="/rewards/ranks">Ranks</Link>
+              <Link onClick={() => setStatus("ranks")}>Ranks</Link>
             </DarkGrayText>
             <DarkGrayText className="text-bold cursor-pointer">
               Leaderboard
@@ -72,7 +106,7 @@ const Rewards = () => {
           <div className=" border-[1px] border-[#666874]"></div>
         </div>
       </header>
-      <section className="body px-2">
+      <section className={`body px-2 ${status === "tasks" ? "" : "hidden"}`}>
         <div className="mx-2  px-1 my-2 rounded-lg bg-[#23262d] h-[400px] w-max-[385px]">
           <div className="flex h-[70px] items-center justify-between">
             <div className="flex items-center my-1">
@@ -174,6 +208,24 @@ const Rewards = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="body px-2">
+        <div className="mx-2 px-1 my-2">
+          <div className="flex justify-between h-[59px]">
+            <LightGrayText className="font-bold text-lg">
+              Climb the ranks
+            </LightGrayText>
+            <div className="px-[5px] mr-1 rounded-3xl flex items-center gap-[10px] w-[75px] h-[29px] text-sm bg-[#2E313E]">
+              <img src="/images/rewards/check.png" />
+              <LightGrayText>0/20</LightGrayText>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-10">
+            {ranks.map((rank) => (
+              <RankCard key={rank.id} {...rank} />
+            ))}
+          </div>
         </div>
       </section>
       <AppBar />
