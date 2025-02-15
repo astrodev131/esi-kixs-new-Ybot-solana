@@ -2,7 +2,7 @@ import CyanButton from "../Components/Custom/Button";
 import { BrownLargeText, BrownText } from "../Components/Custom/Text";
 import GrayCard from "../Components/Custom/GrayCard";
 import React from "react";
-import BrownGradientCard from "../Components/Earn/GradientCard";
+import { BrownGradientCard } from "../Components/Earn/GradientCard";
 
 export default function EarnPage() {
   const [activeTab, setActiveTab] = React.useState("");

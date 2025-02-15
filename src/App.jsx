@@ -1,11 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './App.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./App.css";
 
-import TelegramApp from './TelegramApp.jsx';
+import TelegramApp from "./TelegramApp.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <TelegramApp />
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<TelegramApp />);
 
-export default App
+export default App;
