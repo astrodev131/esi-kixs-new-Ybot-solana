@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import RankCard from "../Components/Rewards/RankCard";
 import { LightGrayText, DarkGrayText } from "../Components/Custom/Text";
+import AppBar from "../Components/AppBar";
 
 const Ranks = () => {
   const ranks = [
@@ -68,7 +70,7 @@ const Ranks = () => {
         <div className="px-[17px]">
           <div className="py-[8px] text-lg flex justify-around">
             <DarkGrayText className="text-bold cursor-pointer">
-              Tasks
+               <Link to="/rewards">Tasks</Link>
             </DarkGrayText>
             <LightGrayText className="text-bold cursor-pointer">
               Ranks
@@ -77,7 +79,7 @@ const Ranks = () => {
               Leaderboard
             </DarkGrayText>
           </div>
-          <div className=" border-2 border-[#666874]"></div>
+          <div className=" border-[1px] border-[#666874]"></div>
         </div>
       </header>
       <section className="body px-2">
@@ -98,6 +100,7 @@ const Ranks = () => {
           </div>
         </div>
       </section>
+      <AppBar />
     </div>
   );
 };
