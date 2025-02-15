@@ -12,7 +12,7 @@
   margin: 0;
   padding: 0;
   touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -40,16 +40,16 @@ body {
   font-style: normal;
   color: #fff;
   cursor: default;
-  font-family: Roboto Flex, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
   min-width: 320px;
-  -webkit-overflow-scrolling: touch !important
+  -webkit-overflow-scrolling: touch !important;
 }
 
 .page {
-  background-color: #0E0C15;
+  background-color: #0e0c15;
   flex-direction: column;
   margin: 0 auto;
   max-width: 480px;
@@ -71,27 +71,27 @@ body {
 
 .inner {
   flex: 1 1 auto;
-  padding: 20px 16px 70px
+  padding: 20px 16px 70px;
 }
 
 img {
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none
+  user-select: none;
 }
 
 a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 svg {
-  transition: all .25s ease;
-  -webkit-transition: all .25s ease
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
 }
 
 ul {
-  list-style: none
+  list-style: none;
 }
 
 .button {
@@ -100,8 +100,8 @@ ul {
   cursor: pointer;
   font-family: inherit;
   outline: none;
-  transition: all .25s ease;
-  -webkit-transition: all .25s ease;
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
   -webkit-tap-highlight-color: transparent;
   align-items: center;
   display: flex;
@@ -116,21 +116,21 @@ ul {
 }
 
 .button:disabled {
-  cursor: not-allowed
+  cursor: not-allowed;
 }
 
 .button:disabled.button-primary {
-  background-color: #4e4f50cc
+  background-color: #4e4f50cc;
 }
 
 .button-copy {
   background-color: transparent;
-  color: #4e4f50
+  color: #4e4f50;
 }
 
 .button-copy:active,
 .button-copy:hover {
-  color: #fff
+  color: #fff;
 }
 
 .button-primary {
@@ -155,16 +155,16 @@ ul {
   border-radius: 28px;
   font-size: 16px;
   font-weight: 600;
-  height: 56px
+  height: 56px;
 }
 
 .button-default svg {
   height: 24px;
-  width: 24px
+  width: 24px;
 }
 
 .button-default img {
-  margin-left: 6px
+  margin-left: 6px;
 }
 
 .bottom-sheet {
@@ -177,11 +177,11 @@ ul {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 99999
+  z-index: 99999;
 }
 
 .bottom-sheet-bg {
-  background-color: #15140Cb3;
+  background-color: #15140cb3;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -196,8 +196,8 @@ ul {
   box-shadow: 0 -4px 64px #38005d99;
   position: relative;
   max-width: 400px;
-  background: #36295C;
-  background-image: url('../public/images/modal.png');
+  background: #36295c;
+  background-image: url("../public/images/modal.png");
   border-radius: 40px;
   margin: 0 auto;
   width: 100%;
@@ -219,16 +219,16 @@ ul {
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none
+  user-select: none;
 }
 
 .bottom-sheet-close svg {
   height: 32px;
-  width: 32px
+  width: 32px;
 }
 
 .bottom-sheet-close:hover {
-  color: #8b8e93
+  color: #8b8e93;
 }
 
 .bottom-sheet-scroll {
@@ -252,23 +252,29 @@ ul {
 }
 
 .bg-card {
-  background: linear-gradient(137.04deg, rgba(26, 24, 34, 0.5) 0%, rgba(28, 26, 36, 0.5) 100%);
+  background: linear-gradient(
+    137.04deg,
+    rgba(26, 24, 34, 0.5) 0%,
+    rgba(28, 26, 36, 0.5) 100%
+  );
   box-shadow: 0px 12px 104px rgba(0, 0, 0, 0.4);
-
 }
 
 .app-bar {
-  position: fixed;
-  bottom: 1rem;
+  position: absolute;
+  bottom: 0rem;
   max-width: 480px;
   width: 100%;
 }
 
 .app-bar-nav {
-  background: linear-gradient(97.91deg, rgba(108, 109, 169, 0.2) 6.1%, rgba(151, 68, 150, 0.2) 103.66%), rgba(29, 29, 29, 0.05);
-  box-shadow: inset 0px 2px 3px rgba(255, 255, 255, 0.15);
-  border-radius: 50px;
+  background: linear-gradient(
+      97.91deg,
+      rgba(108, 109, 169, 0.2) 6.1%,
+      rgba(151, 68, 150, 0.2) 103.66%
+    ),
+    rgba(29, 29, 29, 0.05);
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 100%;
 }

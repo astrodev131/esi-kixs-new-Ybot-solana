@@ -12,7 +12,7 @@ function DailyBonus() {
   const [days, setDays] = useState(1);
   const [available, setAvailable] = useState(true);
   const [loading, setLoading] = useState(true);
-  const [firstStep, setFirstSteps] = useState(1)
+  const [firstStep, setFirstSteps] = useState(1);
   const totalSteps = 7;
 
   useEffect(() => {
@@ -24,8 +24,9 @@ function DailyBonus() {
 
         setAvailable(available);
         setDays(days);
-        setFirstSteps(days < 5 ? 1 : days > DAILY_REWARD_LIST.length ? 14 : days - 3)
-
+        setFirstSteps(
+          days < 5 ? 1 : days > DAILY_REWARD_LIST.length ? 14 : days - 3
+        );
       } catch (e) {
         console.log("apop@fetchDailyReward", e.message);
       } finally {
@@ -44,7 +45,9 @@ function DailyBonus() {
 
       setAvailable(available);
       setDays(days);
-      setFirstSteps(days < 5 ? 1 : days > DAILY_REWARD_LIST.length ? 14 : days - 3)
+      setFirstSteps(
+        days < 5 ? 1 : days > DAILY_REWARD_LIST.length ? 14 : days - 3
+      );
 
       if (status == "success") {
         setUser(user);
@@ -65,50 +68,53 @@ function DailyBonus() {
       <div className="page">
         <main className="main">
           <img
-            src={`${available
-              ? "/images/reward_open.png"
-              : "/images/reward_claimed.png"
-              }`}
+            src={`${
+              available
+                ? "/images/reward_open.png"
+                : "/images/reward_claimed.png"
+            }`}
             className="w-full absolute"
           />
           <div className="inner mt-[500px]">
             <div className="flex items-center justify-center">
-              {Array.from({ length: 7 }, (_, i) => firstStep + i).map((value, index) => {
-                const stepNumber = index + 1;
-                const isActive = value === days;
-                const isCompleted = value < days;
-                return (
-                  <div key={stepNumber} className="flex items-center">
-                    <div
-                      className={`rounded-full flex items-center justify-center font-bold transition-colors duration-300 ${isCompleted
-                        ? "bg-[#FF98F2] text-black w-8 h-8 "
-                        : isActive
-                          ? "bg-[#FF98F2] text-black border-[6px] border-black w-10 h-10 border-double"
-                          : "bg-[#0f121f] w-8 h-8"
-                        }`}
-                    >
-                      {value}
-                    </div>
-                    {stepNumber < totalSteps && (
+              {Array.from({ length: 7 }, (_, i) => firstStep + i).map(
+                (value, index) => {
+                  const stepNumber = index + 1;
+                  const isActive = value === days;
+                  const isCompleted = value < days;
+                  return (
+                    <div key={stepNumber} className="flex items-center">
                       <div
-                        className={`h-1 w-5 ${isCompleted ? "bg-[#FF98F2]" : "bg-[#0f121f]"
+                        className={`rounded-full flex items-center justify-center font-bold transition-colors duration-300 ${
+                          isCompleted
+                            ? "bg-[#FF98F2] text-black w-8 h-8 "
+                            : isActive
+                            ? "bg-[#FF98F2] text-black border-[6px] border-black w-10 h-10 border-double"
+                            : "bg-[#0f121f] w-8 h-8"
+                        }`}
+                      >
+                        {value}
+                      </div>
+                      {stepNumber < totalSteps && (
+                        <div
+                          className={`h-1 w-5 ${
+                            isCompleted ? "bg-[#FF98F2]" : "bg-[#0f121f]"
                           }`}
-                      />
-                    )}
-                  </div>
-                );
-              })}
+                        />
+                      )}
+                    </div>
+                  );
+                }
+              )}
             </div>
-            <p className="text-center text-xl p-4">{available ? "Daily Reward" : "Reward Claimed"}</p>
+            <p className="text-center text-xl p-4">
+              {available ? "Daily Reward" : "Reward Claimed"}
+            </p>
             <ul className="my-2 flex justify-center">
               {!loading ? (
-                <li className={`flex items-center`}                >
+                <li className={`flex items-center`}>
                   <div className="flex items-center bg-card py-2 px-4 rounded-3xl">
-                    <img
-                      src="/images/y_crystal.png"
-                      alt="y token"
-                      width={24}
-                    />
+                    <img src="/images/y_crystal.png" alt="y token" width={24} />
                     <p className="p-1">
                       {convert(DAILY_REWARD_LIST[days - 1]?.point)}
                     </p>
@@ -140,20 +146,18 @@ function DailyBonus() {
                 your check-ins.
               </p>
             </div>
-            {
-              available && (
-                <div className="w-full bottom-24">
-                  <button
-                    className="button button-default mx-auto w-[90%] mb-4"
-                    style={{ border: "3px solid white" }}
-                    onClick={handleClaim}
-                    disabled={!available}
-                  >
-                    Claim Reward
-                  </button>
-                </div>
-              )
-            }
+            {available && (
+              <div className="w-full bottom-24">
+                <button
+                  className="button button-default mx-auto w-[90%] mb-4"
+                  style={{ border: "3px solid white" }}
+                  onClick={handleClaim}
+                  disabled={!available}
+                >
+                  Claim Reward
+                </button>
+              </div>
+            )}
           </div>
         </main>
         <AppBar />

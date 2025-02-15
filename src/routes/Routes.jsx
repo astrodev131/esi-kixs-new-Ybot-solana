@@ -13,6 +13,8 @@ import FlappyBird from "../Pages/FlappyBird";
 import Spin from "../Pages/Spin";
 import Rewards from "../Pages/Rewards";
 import Ranks from "../Pages/Ranks";
+import EarnPage from "../Pages/EarnPage";
+
 
 export default createBrowserRouter([
   {
@@ -21,7 +23,8 @@ export default createBrowserRouter([
   },
   {
     path: "/earn",
-    element: <Earn />,
+    // element: <Earn />,
+    element: <EarnPage />,
   },
   {
     path: "/daily-bonus",
