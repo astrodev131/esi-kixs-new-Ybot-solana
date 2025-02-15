@@ -36,6 +36,4 @@ const GrayBrownGradientCard = ({ children }) => {
   );
 };
 
-export { AAA };
-
-export default GradientCard;
+export { BrownGradientCard, GrayBrownGradientCard };

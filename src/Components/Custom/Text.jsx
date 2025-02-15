@@ -6,6 +6,7 @@ const DarkGrayText = ({ children, className = "" }) => {
   return <div className={`text-[#666874] ${className}`}>{children}</div>;
 };
 
+
 const BrownLargeText = ({ children, className = "" }) => {
   return (
     <div className={`text-[#3F3008] font-bold text-[30px] ${className}`}>
@@ -21,3 +22,4 @@ const BrownText = ({ children, className = "" }) => {
   );
 };
 export { LightGrayText, DarkGrayText, BrownLargeText, BrownText };
+

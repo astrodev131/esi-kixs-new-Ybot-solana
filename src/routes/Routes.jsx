@@ -13,11 +13,16 @@ import FlappyBird from "../Pages/FlappyBird";
 import Spin from "../Pages/Spin";
 import Rewards from "../Pages/Rewards";
 import EarnPage from "../Pages/EarnPage";
+import HomePage from "../Pages/HomePage";
 
 export default createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/home",
+    element: <HomePage />,
   },
   {
     path: "/earn",
