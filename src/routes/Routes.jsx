@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Home from "../Pages/Home";
 import Earn from "../Pages/Earn";
+import Ranks from "../Pages/Ranks";
 import DailyBonus from "../Pages/DailyBonus";
 import League from "../Pages/League";
 import Account from "../Pages/Account";
@@ -14,7 +15,6 @@ import Spin from "../Pages/Spin";
 import Rewards from "../Pages/Rewards";
 import EarnPage from "../Pages/EarnPage";
 import Tasks from "../Pages/Tasks";
-
 import Trade from "../Pages/Trade";
 import HomePage from "../Pages/HomePage";
 
@@ -72,10 +72,10 @@ export default createBrowserRouter([
     path: "/rewards",
     element: <Rewards />,
   },
-  // {
-  //   path: "/rewards/ranks",
-  //   element: <Ranks />,
-  // },
+  {
+    path: "/rewards/ranks",
+    element: <Ranks />,
+  },
   {
     path: "/rewards/tasks",
     element: <Tasks />,
