@@ -3,8 +3,8 @@ import {
   BrownLargeText,
   BrownText,
   WhiteBoldText,
-  RightCyanText,
-  RightRedText,
+  CyanText,
+  RedText,
 } from "../Components/Custom/Text";
 import GrayCard from "../Components/Custom/GrayCard";
 import React from "react";
@@ -14,6 +14,7 @@ import {
   Mypick,
   GrayGradientCardFirm,
 } from "../Components/Earn/GradientCard";
+import { GradientCard } from "../Components/Earn/GradientCard";
 
 export default function EarnPage() {
   const [activeTab, setActiveTab] = React.useState("winners");
@@ -78,7 +79,7 @@ export default function EarnPage() {
       name: "NOT TON",
       percentage: 100,
       imageSrc: "/images/earn/Image.png",
-      rightText: <RightCyanText>100 USDT</RightCyanText>,
+      rightText: <CyanText>100 USDT</CyanText>,
     },
     {
       id: 2,
@@ -86,7 +87,7 @@ export default function EarnPage() {
       name: "TRUMP",
       percentage: 100,
       imageSrc: "/images/earn/image 11.png",
-      rightText: <RightRedText>-10 USDT</RightRedText>,
+      rightText: <RedText>-10 USDT</RedText>,
     },
   ];
   const mybetbrownlist = [
@@ -96,7 +97,7 @@ export default function EarnPage() {
       name: "NOT TON",
       percentage: 100,
       imageSrc: "/images/earn/Image.png",
-      rightText: <RightCyanText>500 USDT</RightCyanText>,
+      rightText: <CyanText>500 USDT</CyanText>,
     },
   ];
 
@@ -119,19 +120,29 @@ export default function EarnPage() {
         {mybetgraylist.map((card, index) => (
           <GrayGradientCardFirm key={index} {...card} />
         ))}
-        <div>
-          <div>
-            <div>My Stake</div>
-            <div>10$</div>
+        <div className="flex justify-between p-6">
+          <div className="space-y-5">
+            <div className="text-3xl">My Stake</div>
+            <WhiteBoldText>10$</WhiteBoldText>
           </div>
-          <div>
-            <div>My Win/Loss</div>
-            <div>+590$</div>
+          <div className="space-y-5">
+            <div className="text-3xl">My Win/Loss</div>
+            <CyanText className="text-[40px]">+590$</CyanText>
           </div>
         </div>
       </>
     ),
-    "trading-day-summary": <div>asdfasdfasdfsdf</div>,
+    "trading-day-summary": (
+      <GradientCard
+        gradientColors={[
+          "#E8C670 22.13%",
+          "#F1D58F 36.13%",
+          "#E8C670 48.08%",
+          "#FBE3AA 62.08%",
+          "#E8C670 82.9%",
+        ]}
+      ></GradientCard>
+    ),
   };
   return (
     <div className="page">
