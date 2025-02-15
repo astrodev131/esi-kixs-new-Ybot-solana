@@ -65,7 +65,7 @@ function TradingView() {
         </div>
 
         {/* wallet connection */}
-        {walletConnected !== false ? (
+        {walletConnected === false ? (
           <div className="px-2 my-2 w-full">
             <div className="bg-[#1f2937] text-[#898B94] rounded-3xl w-full space-y-5 text-center py-12 ">
               <p>Connect wallet to buy this coin </p>
