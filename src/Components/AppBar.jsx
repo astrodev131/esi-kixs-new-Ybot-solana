@@ -10,7 +10,9 @@ function AppBar() {
       <nav className="app-bar-nav flex justify-around gap-2 relative p-2">
         <Link
           to="/"
-          className={`p-2 hover:bg-[#1D1C17] rounded-2xl z-10 ${getLinkClass("/")}`}
+          className={`p-2 hover:bg-[#1D1C17] rounded-2xl z-10 ${getLinkClass(
+            "/"
+          )}`}
         >
           <img src="/images/appbar/home.png" alt="home logo" width={28} />
         </Link>
