@@ -6,8 +6,8 @@ const BrownGradientCard = ({ children }) => {
       style={{
         width: "100%",
         height: "86px",
-        padding: "20px",
-        display: "flex",
+        // padding: "15px",
+
         alignItems: "center",
         background:
           "linear-gradient(262.25deg, #E8C670 22.13%, #F1D58F 36.13%, #E8C670 48.08%, #FBE3AA 62.08%, #E8C670 82.9%)",

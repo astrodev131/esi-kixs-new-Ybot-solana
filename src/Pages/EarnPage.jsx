@@ -8,6 +8,22 @@ import GrayCard from "../Components/Custom/GrayCard";
 import React from "react";
 import { BrownGradientCard } from "../Components/Earn/GradientCard";
 
+const Mypick = () => {
+  return (
+    <div className="w-8 h-[86px] font-bold text-center justify-center flex items-center rounded bg-[#32CDB3]">
+      <div
+        className="vertical-text"
+        style={{
+          writingMode: "vertical-rl",
+          transform: "rotate(180deg)",
+        }}
+      >
+        My pick
+      </div>
+    </div>
+  );
+};
+
 export default function EarnPage() {
   const [activeTab, setActiveTab] = React.useState("");
 
@@ -21,7 +37,7 @@ export default function EarnPage() {
 
   return (
     <div className="page">
-      <main className="main">
+      <main className="main flex items-center justify-center min-h-screen">
         <div
           className="w-[95%] py-10 px-5 mx-auto"
           style={{
@@ -84,27 +100,32 @@ export default function EarnPage() {
             </div>
             <div>
               <BrownGradientCard>
-                <div className="">
-                  <div className="flex justify-between w-full items-center">
-                    <div className="flex justify-between gap-2 items-center">
-                      <div className="w-[60px]">
-                        <img src="/images/earn/image 9.png" alt="Earn Image" />
-                      </div>
-                      <div className="flex flex-col justify-between items-stretch gap-2">
-                        <div className="flex justify-around items-center gap-2">
-                          <BrownText className="bg-white p-2 rounded-md">
-                            #1
-                          </BrownText>
-                          <BrownText>BITCOIN</BrownText>
+                <div className="w-full h-full flex justify-between">
+                  <div className="flex p-[15px] justify-between w-full h-full items-center">
+                    <div className="flex justify-between w-full items-center">
+                      <div className="flex justify-between gap-2 items-center">
+                        <div className="w-[60px]">
+                          <img
+                            src="/images/earn/image 9.png"
+                            alt="Earn Image"
+                          />
                         </div>
-                        <BrownText>+10,000%</BrownText>
+                        <div className="flex flex-col justify-between items-stretch gap-2">
+                          <div className="flex justify-around items-center gap-2">
+                            <BrownText className="bg-white p-1 rounded-md">
+                              #1
+                            </BrownText>
+                            <BrownText>BITCOIN</BrownText>
+                          </div>
+                          <BrownText>+10,000%</BrownText>
+                        </div>
                       </div>
-                    </div>
-                    <div>
-                      <WhiteBoldText>100X</WhiteBoldText>
+                      <div>
+                        <WhiteBoldText>100X</WhiteBoldText>
+                      </div>
                     </div>
                   </div>
-                  <div></div>
+                  <Mypick />
                 </div>
               </BrownGradientCard>
             </div>
