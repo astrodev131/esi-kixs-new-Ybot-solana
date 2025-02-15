@@ -223,7 +223,7 @@ function HomePage() {
               <div
                 key={index}
                 onClick={() => setCurrentState(value)}
-                className={`cursor-pointer px-4 ${
+                className={`text-[#383A47] font-bold hover:text-[#C0C2C4] cursor-pointer px-4 ${
                   value.title === currentState.title
                     ? "text-[#ffffff]"
                     : "text-[#545458]"
@@ -234,7 +234,7 @@ function HomePage() {
             ))}
           </div>
         </div>
-        <Devider></Devider>
+        <Devider className={"mt-2"}></Devider>
         {currentState.title === "Rules" && (
           <div className="text-xl text-center pb-2">
             Meme Coin Arena - Rules 🚀

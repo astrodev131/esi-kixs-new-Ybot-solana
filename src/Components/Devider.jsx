@@ -1,5 +1,3 @@
-export default function Devider() {
-  return (
-    <div style={{ borderBottom: "2px solid #1A1C28", margin: "10px 0" }}></div>
-  );
+export default function Devider({ className }) {
+  return <div className={`border-b-2 border-gray-800 my-2 ${className}`}></div>;
 }

@@ -224,7 +224,7 @@ export default function EarnPage() {
         </div>
         <GrayCard className={"w-full"}>
           <div>
-            <div className="text-xl text-center font-bold">
+            <div className="text-xl text-center mb-3 font-bold">
               Simulation Results
             </div>
             <nav>

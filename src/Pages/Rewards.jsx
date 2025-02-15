@@ -101,24 +101,28 @@ const Rewards = () => {
           <div className="px-[17px]">
             <div className="py-[8px] text-lg flex justify-around">
               <span
-                className={`text-bold cursor-pointer text-[${
-                  status == "tasks" ? "#AFB1B5" : "#666874"
-                }]`}
+                className={`text-bold cursor-pointer ${
+                  status === "tasks" ? "text-white" : "text-[#AFB1B5]"
+                }`}
               >
                 <Link
                   onClick={() => setStatus("tasks")}
-                  className="text-[#383A47] font-bold hover:text-[#C0C2C4]"
+                  className={`${
+                    status === "tasks" ? "text-white" : "text-[#383A47]"
+                  } font-bold hover:text-[#C0C2C4]`}
                 >
                   Tasks
                 </Link>
               </span>
               <span
-                className={`text-bold cursor-pointer text-[${
-                  status == "tasks" ? "#666874" : "#AFB1B5"
-                }]`}
+                className={`text-bold cursor-pointer ${
+                  status === "ranks" ? "text-white" : "text-[#AFB1B5]"
+                }`}
               >
                 <Link
-                  className="text-[#383A47] font-bold hover:text-[#C0C2C4]"
+                  className={`${
+                    status === "ranks" ? "text-white" : "text-[#383A47]"
+                  } font-bold hover:text-[#C0C2C4]`}
                   onClick={() => setStatus("ranks")}
                 >
                   Ranks

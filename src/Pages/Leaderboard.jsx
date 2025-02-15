@@ -92,13 +92,13 @@ export default function Leaderboard() {
       </>
     ),
     Weekly: <></>,
-    Monthly: <div></div>,
+    Monthly: <></>,
   };
 
   return (
     <div className="page">
       <Header />
-      <main className="main flex items-center justify-center min-h-screen">
+      <main className="main flex items-center p-4 justify-center min-h-screen">
         <div
           className="w-[95%] py-10 mb-5 px-5 mx-auto"
           style={{
@@ -115,10 +115,10 @@ export default function Leaderboard() {
             +124.77 USDT
           </CyanButton>
         </div>
-        <GrayCard>
+        <GrayCard className={"w-full"}>
           <div>
-            <div className="text-xl text-center font-bold">
-              Simulation Results
+            <div className="text-xl text-center mb-3 font-bold">
+              Leaderboard
             </div>
             <nav>
               <ul className="flex text-[#383A47] font-bold justify-around max-w-[600px] overflow-x-auto whitespace-nowrap">
