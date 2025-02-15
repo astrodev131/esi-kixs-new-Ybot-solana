@@ -74,12 +74,13 @@ const NewsItemPage = () => {
   return (
     <div className="page">
       <Header />
-      <Alert>
-        <div className="text-2xl font-semibold ml-20 mt-4 text-[#3f3008]">
-          {newsId}
-        </div>
-      </Alert>
+
       <div className="p-4">
+        <Alert>
+          <div className="text-2xl font-semibold ml-20 mt-4 text-[#3f3008]">
+            {newsId}
+          </div>
+        </Alert>
         <div className="border-b-2 my-4 border-b-[#383a47] w-full justify-center relative flex">
           <div
             ref={navRef}

@@ -3,6 +3,8 @@ import {
   BrownLargeText,
   BrownText,
   WhiteBoldText,
+  RightCyanText,
+  RightRedText,
 } from "../Components/Custom/Text";
 import GrayCard from "../Components/Custom/GrayCard";
 import React from "react";
@@ -48,16 +50,53 @@ export default function EarnPage() {
       mypick: <Blank />,
       rightText: <WhiteBoldText>10X</WhiteBoldText>,
     },
+    {
+      id: 3,
+      rank: "#4",
+      name: "ELON",
+      percentage: 100,
+      imageSrc: "/images/earn/image 10.png",
+      mypick: <Mypick />,
+      rightText: <WhiteBoldText>10X</WhiteBoldText>,
+    },
+    {
+      id: 4,
+      rank: "#5",
+      name: "TATE",
+      percentage: 100,
+      imageSrc: "/images/earn/image 12.png",
+      mypick: <Blank />,
+      rightText: <WhiteBoldText>10X</WhiteBoldText>,
+    },
   ];
+
   const mybetgraylist = [
+    {
+      id: 1,
+
+      rank: "#2",
+      name: "NOT TON",
+      percentage: 100,
+      imageSrc: "/images/earn/Image.png",
+      rightText: <RightCyanText>100 USDT</RightCyanText>,
+    },
+    {
+      id: 2,
+      rank: "#3",
+      name: "TRUMP",
+      percentage: 100,
+      imageSrc: "/images/earn/image 11.png",
+      rightText: <RightRedText>-10 USDT</RightRedText>,
+    },
+  ];
+  const mybetbrownlist = [
     {
       id: 1,
       rank: "#2",
       name: "NOT TON",
       percentage: 100,
       imageSrc: "/images/earn/Image.png",
-      mypick: <Mypick />,
-      rightText: <WhiteBoldText>10X</WhiteBoldText>,
+      rightText: <RightCyanText>500 USDT</RightCyanText>,
     },
   ];
 
@@ -74,12 +113,22 @@ export default function EarnPage() {
     ),
     "my-bets": (
       <>
-        {mybetgraylist.map((card, index) => (
+        {mybetbrownlist.map((card, index) => (
           <BrownGradientCardFirm key={index} {...card} />
         ))}
-        {winnergraylist.map((card, index) => (
+        {mybetgraylist.map((card, index) => (
           <GrayGradientCardFirm key={index} {...card} />
         ))}
+        <div>
+          <div>
+            <div>My Stake</div>
+            <div>10$</div>
+          </div>
+          <div>
+            <div>My Win/Loss</div>
+            <div>+590$</div>
+          </div>
+        </div>
       </>
     ),
     "trading-day-summary": <div>asdfasdfasdfsdf</div>,

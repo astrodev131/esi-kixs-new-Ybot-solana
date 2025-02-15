@@ -21,16 +21,16 @@ const BrownText = ({ children, className = "" }) => {
   );
 };
 
-const RightCyanTextComponent = ({ children, className = "" }) => {
+const RightCyanText = ({ children, className = "" }) => {
   return (
-    <div className={`text-[#32CDB3] font-semibold text-[14px] ${className}`}>
+    <div className={`text-[#32CDB3] font-semibold text-[30px] ${className}`}>
       {children}
     </div>
   );
 };
-const RightRedTextComponent = ({ children, className = "" }) => {
+const RightRedText = ({ children, className = "" }) => {
   return (
-    <div className={`text-[#E7003E] font-semibold text-[14px] ${className}`}>
+    <div className={`text-[#E7003E] font-semibold text-[30px] ${className}`}>
       {children}
     </div>
   );
@@ -48,6 +48,6 @@ export {
   BrownLargeText,
   BrownText,
   WhiteBoldText,
-  RightRedTextComponent,
-  RightCyanTextComponent,
+  RightRedText,
+  RightCyanText,
 };
