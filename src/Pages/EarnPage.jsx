@@ -84,9 +84,9 @@ export default function EarnPage() {
             </div>
             <div>
               <BrownGradientCard>
-                <div>
+                <div className="">
                   <div className="flex justify-between w-full items-center">
-                    <div className="flex justify-start gap-2 items-center">
+                    <div className="flex justify-between gap-2 items-center">
                       <div className="w-[60px]">
                         <img src="/images/earn/image 9.png" alt="Earn Image" />
                       </div>
