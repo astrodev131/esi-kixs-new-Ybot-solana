@@ -29,10 +29,10 @@ const Portfolio = () => {
 
   return (
     <div>
-        <Header/>
+      <Header />
       <div className="page px-3">
         <div>
-          <div className="flex justify-between text-xl font-bold my-4">
+          <div className="flex justify-between text-xl font-bold my-2">
             <div className="flex">
               <LightGrayText className="mr-4">My Picks</LightGrayText>
               <DarkGrayText>Last Trading Day</DarkGrayText>
@@ -60,7 +60,7 @@ const Portfolio = () => {
                 src="/images/rewards/mark2.png"
                 className="ml-2 w-[39px] h-[39px]"
               />
-              <div className="ml-4 flex flex-col my-4">
+              <div className="ml-4 flex flex-col my-2">
                 <LightGrayText className="font-bold text-lg">
                   $TRUMP
                 </LightGrayText>
@@ -73,7 +73,7 @@ const Portfolio = () => {
           <div className="border border-[#666874]"></div>
         </div>
         <div>
-          <div className="flex justify-between text-xl font-bold my-4">
+          <div className="flex justify-between text-xl font-bold mt-3 mb-1">
             <div className="flex">
               <LightGrayText className="mr-4">
                 Most traded meme coins
@@ -98,8 +98,8 @@ const Portfolio = () => {
           <div className="border border-[#666874]"></div>
           {rewards.map(({ id, name, timeLeft, image }) => (
             <div key={id}>
-              <div className="flex h-[70px] items-center justify-between my-3">
-                <div className="flex items-center my-1">
+              <div className="flex h-[70px] items-center justify-between my-1">
+                <div className="flex items-center">
                   <img
                     src={image}
                     className="ml-2 w-[39px] h-[39px]"
