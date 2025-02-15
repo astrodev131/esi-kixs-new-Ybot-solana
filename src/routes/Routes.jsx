@@ -15,9 +15,12 @@ import Spin from "../Pages/Spin";
 import Rewards from "../Pages/Rewards";
 import EarnPage from "../Pages/EarnPage";
 import Tasks from "../Pages/Tasks";
+import Portfolio from "../Pages/Portfolio";
+import Trade from "../Pages/Trade";
 import Trade from "../Pages/Trade";
 import HomePage from "../Pages/HomePage";
 import TradingView from "../Pages/TradingView";
+
 
 export default createBrowserRouter([
   {
@@ -78,11 +81,13 @@ export default createBrowserRouter([
     element: <Rewards />,
   },
   {
-    path: "/rewards/ranks",
-    element: <Ranks />,
-  },
-  {
     path: "/rewards/tasks",
     element: <Tasks />,
   },
+
+  {
+    path: "/portfolio",
+    element: <Portfolio/>,
+  },
+
 ]);
