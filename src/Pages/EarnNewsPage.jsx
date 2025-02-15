@@ -16,7 +16,9 @@ const EarnNewsPage = () => {
             </p>
           </div>
         </Alert>
-        <div className="text-3xl uppercase font-semibold text-center p-4">News</div>
+        <div className="text-3xl uppercase font-semibold text-center p-4">
+          News
+        </div>
         <div className="bg-[#21242d] rounded-2xl p-4 text-base text-white mt-8 flex flex-col gap-4">
           <p className="font-bold">Elon Musk Tweets 🚀</p>
           <p>

@@ -28,115 +28,118 @@ const Portfolio = () => {
   ];
 
   return (
-    <div>
-      <Header />
-      <div className="page px-3">
-        <div>
-          <div className="flex justify-between text-xl my-2">
-            <div className="flex">
-              <LightGrayText className="mr-4">My Picks</LightGrayText>
-              <DarkGrayText>Last Trading Day</DarkGrayText>
-            </div>
-            <button
-              className="transition cursor-pointer"
-              onClick={() => setIsExpanded1((prev) => !prev)}
-              aria-label="Toggle Portfolio View"
-            >
-              <svg
-                height="24"
-                width="24"
-                stroke="currentColor"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path d={isExpanded1 ? "M4 16l8-8 8 8" : "M6 9l6 6 6-6"} />
-              </svg>
-            </button>
-          </div>
-          <div className="border border-[#666874]"></div>
+    <div className="page">
+      <main className="main">
+        <Header />
+        <div className="px-3">
           <div>
-            <div className="flex items-center my-1">
-              <img
-                src="/images/rewards/mark2.png"
-                className="ml-2 w-[39px] h-[39px]"
-              />
-              <div className="ml-4 flex flex-col my-2">
-                <LightGrayText className="font-bold text-lg">
-                  $TRUMP
-                </LightGrayText>
-                <LightGrayText className="text-sm ">5 USDT</LightGrayText>
+            <div className="flex justify-between text-xl my-2">
+              <div className="flex">
+                <LightGrayText className="mr-4">My Picks</LightGrayText>
+                <DarkGrayText>Last Trading Day</DarkGrayText>
               </div>
-            </div>
-          </div>
-          <div className="border border-[#666874]"></div>
-        </div>
-        <div>
-          <div className="flex justify-between text-xl  mt-3 mb-1">
-            <div className="flex">
-              <LightGrayText className="mr-4">
-                Most traded meme coins
-              </LightGrayText>
-            </div>
-            <button
-              className="transition cursor-pointer"
-              onClick={() => setIsExpanded2((prev) => !prev)}
-              aria-label="Toggle Portfolio View"
-            >
-              <svg
-                height="24"
-                width="24"
-                stroke="currentColor"
-                fill="none"
-                viewBox="0 0 24 24"
+              <button
+                className="transition cursor-pointer"
+                onClick={() => setIsExpanded1((prev) => !prev)}
+                aria-label="Toggle Portfolio View"
               >
-                <path d={isExpanded2 ? "M4 16l8-8 8 8" : "M6 9l6 6 6-6"} />
-              </svg>
-            </button>
-          </div>
-          <div className="border border-[#666874]"></div>
-          {rewards.map(({ id, name, timeLeft, image }) => (
-            <div key={id}>
-              <div className="flex h-[70px] items-center justify-between my-1">
-                <div className="flex items-center">
-                  <img
-                    src={image}
-                    className="ml-2 w-[39px] h-[39px]"
-                    alt={name}
-                  />
-                  <div className="ml-4 flex flex-col">
-                    <LightGrayText className="font-bold text-lg">
-                      {name}
-                    </LightGrayText>
-                    <LightGrayText className="text-sm">
-                      {timeLeft}
-                    </LightGrayText>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  className="inline-block rounded bg-[#00D083] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3"
+                <svg
+                  height="24"
+                  width="24"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 24"
                 >
-                  ADD
-                </button>
-              </div>
-              <div className="border border-[#666874]"></div>
+                  <path d={isExpanded1 ? "M4 16l8-8 8 8" : "M6 9l6 6 6-6"} />
+                </svg>
+              </button>
             </div>
-          ))}
+            <div className="border border-[#666874]"></div>
+            <div>
+              <div className="flex items-center my-1">
+                <img
+                  src="/images/rewards/mark2.png"
+                  className="ml-2 w-[39px] h-[39px]"
+                />
+                <div className="ml-4 flex flex-col my-2">
+                  <LightGrayText className="font-bold text-lg">
+                    $TRUMP
+                  </LightGrayText>
+                  <LightGrayText className="text-sm ">5 USDT</LightGrayText>
+                </div>
+              </div>
+            </div>
+            <div className="border border-[#666874]"></div>
+          </div>
+          <div>
+            <div className="flex justify-between text-xl  mt-3 mb-1">
+              <div className="flex">
+                <LightGrayText className="mr-4">
+                  Most traded meme coins
+                </LightGrayText>
+              </div>
+              <button
+                className="transition cursor-pointer"
+                onClick={() => setIsExpanded2((prev) => !prev)}
+                aria-label="Toggle Portfolio View"
+              >
+                <svg
+                  height="24"
+                  width="24"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path d={isExpanded2 ? "M4 16l8-8 8 8" : "M6 9l6 6 6-6"} />
+                </svg>
+              </button>
+            </div>
+            <div className="border border-[#666874]"></div>
+            {rewards.map(({ id, name, timeLeft, image }) => (
+              <div key={id}>
+                <div className="flex h-[70px] items-center justify-between my-1">
+                  <div className="flex items-center">
+                    <img
+                      src={image}
+                      className="ml-2 w-[39px] h-[39px]"
+                      alt={name}
+                    />
+                    <div className="ml-4 flex flex-col">
+                      <LightGrayText className="font-bold text-lg">
+                        {name}
+                      </LightGrayText>
+                      <LightGrayText className="text-sm">
+                        {timeLeft}
+                      </LightGrayText>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    className="inline-block rounded bg-[#00D083] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3"
+                  >
+                    ADD
+                  </button>
+                </div>
+                <div className="border border-[#666874]"></div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <button
+              type="button"
+              className="mt-8 inline-block rounded bg-[#00D083] w-[270px] px-6 py-[10px] text-[15px] font-medium uppercase leading-normal text-white"
+            >
+              start simulation
+            </button>
+            <DarkGrayText className="mt-4 w-[273px] h-[43px] text-[10px] font-semibold leading-[17px] mx-auto">
+              This will start the simulation of the next trading day and the
+              winning meme coins will be determined
+            </DarkGrayText>
+          </div>
         </div>
-        <div className="text-center">
-          <button
-            type="button"
-            className="mt-8 inline-block rounded bg-[#00D083] w-[270px] px-6 py-[10px] text-[15px] font-medium uppercase leading-normal text-white"
-          >
-            start simulation
-          </button>
-          <DarkGrayText className="mt-4 w-[273px] h-[43px] text-[10px] font-semibold leading-[17px] mx-auto">
-            This will start the simulation of the next trading day and the
-            winning meme coins will be determined
-          </DarkGrayText>
-        </div>
-      </div>
-      <AppBar />
+        <div className="mb-[90px]"></div>
+        <AppBar />
+      </main>
     </div>
   );
 };

@@ -160,6 +160,7 @@ function DailyBonus() {
             )}
           </div>
         </main>
+        <div className="mb-[90px]"></div>
         <AppBar />
       </div>
     </div>

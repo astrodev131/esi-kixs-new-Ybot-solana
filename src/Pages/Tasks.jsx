@@ -33,7 +33,7 @@ const Tasks = () => {
   ];
   return (
     <div className="page">
-      <Header/>
+      <Header />
       <header className="h-[210px] bg-[#20232C]">
         <img src="/images/rewards/back.png" className="mx-auto mt-[40px]" />
       </header>
@@ -87,6 +87,7 @@ const Tasks = () => {
           </div>
         </div>
       </main>
+      <div className="mb-[90px]"></div>
       <AppBar />
     </div>
   );
