@@ -18,7 +18,6 @@ import Tasks from "../Pages/Tasks";
 import Trade from "../Pages/Trade";
 import HomePage from "../Pages/HomePage";
 
-
 export default createBrowserRouter([
   {
     path: "/",
@@ -73,13 +72,12 @@ export default createBrowserRouter([
     path: "/rewards",
     element: <Rewards />,
   },
-  {
-    path: "/rewards/ranks",
-    element: <Ranks />,
-  },
+  // {
+  //   path: "/rewards/ranks",
+  //   element: <Ranks />,
+  // },
   {
     path: "/rewards/tasks",
     element: <Tasks />,
   },
-
 ]);
