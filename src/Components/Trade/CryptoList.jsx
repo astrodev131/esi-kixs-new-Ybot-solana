@@ -95,8 +95,13 @@ const CryptoList = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-between w-2/5 gap-4">
-            <img src="./images/coins/grahp.png" alt="next" width={64} />
+          <div className="flex items-center xs:justify-between justify-end w-2/5 gap-4">
+            <img
+              src="./images/coins/grahp.png"
+              alt="next"
+              className="xs:block hidden"
+              width={64}
+            />
             <div className="text-right">
               <p className="text-[#98999F] font-semibold">
                 {crypto.price.toFixed(5)}

@@ -14,6 +14,7 @@ import Rewards from "../Pages/Rewards";
 import EarnPage from "../Pages/EarnPage";
 import Tasks from "../Pages/Tasks";
 import Trade from "../Pages/Trade";
+import TradingView from "../Pages/TradingView";
 import HomePage from "../Pages/HomePage";
 import NewsPage from "../Pages/NewsPage";
 import NewsItemPage from "../Pages/NewsItemPage";
@@ -44,7 +45,7 @@ export default createBrowserRouter([
   },
   {
     path: "/earn/news",
-    element: <EarnNewsPage />
+    element: <EarnNewsPage />,
   },
   {
     path: "/daily-bonus",
@@ -53,6 +54,10 @@ export default createBrowserRouter([
   {
     path: "/trade",
     element: <Trade />,
+  },
+  {
+    path: "/trade/:coin",
+    element: <TradingView />,
   },
   {
     path: "/league",
@@ -92,6 +97,6 @@ export default createBrowserRouter([
   },
   {
     path: "/portfolio",
-    element:<Portfolio/>
-  }
+    element: <Portfolio />,
+  },
 ]);

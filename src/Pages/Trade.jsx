@@ -36,7 +36,7 @@ function Trade() {
         </div>
 
         {/* catigories */}
-        <div className="flex space-x-4 text-gray-500 justify-around py-2 px-6 text-[16px] font-semibold">
+        <div className="flex space-x-4 text-gray-500 overflow-auto justify-around py-2 px-6 text-[16px] font-semibold">
           {categories.map((category) => (
             <button
               key={category.name}
@@ -55,7 +55,7 @@ function Trade() {
         <div className="border-t-2 mx-2 border-[#4b4d5880]"></div>
 
         {/* sort part */}
-        <div className="flex items-center justify-around px-2 py-3 space-x-3 text-gray-500 text-[16px] font-semibold">
+        <div className="flex items-center overflow-auto justify-around px-2 py-3 space-x-3 text-gray-500 text-[16px] font-semibold">
           <button className="bg-gray-600 text-white px-4 py-2 rounded-lg">
             Margin: All
           </button>
