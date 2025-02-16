@@ -309,7 +309,7 @@ export default function EarnPage() {
                   <a
                     key={tab}
                     href={`#${tab}`}
-                    className={`hover:text-[#C0C2C4] ${
+                    className={`hover:text-[#C0C2C4] font-semibold ${
                       activeTab === tab ? "text-[#ffffff]" : "text-[#545458]"
                     }`}
                     onClick={() => setActiveTab(tab)}
