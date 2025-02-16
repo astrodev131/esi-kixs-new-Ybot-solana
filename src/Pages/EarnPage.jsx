@@ -147,11 +147,13 @@ export default function EarnPage() {
             "#E8C670 82.9%",
           ]}
         >
-          <WhiteBoldText className="w-full h-full rounded-2xl hover:shadow-[#32CDB3] hover:shadow-[0_0_20px_4px_rgba(0,0,0,0.5)]">
-            <div className="flex justify-center items-center p-5 font-bold text-[35px] xs:text-[40px]">
-              NEWS
-            </div>
-          </WhiteBoldText>
+          <a href="/earn/news">
+            <WhiteBoldText className="w-full h-full rounded-2xl hover:shadow-[#32CDB3] hover:shadow-[0_0_20px_4px_rgba(0,0,0,0.5)]">
+              <div className="flex justify-center items-center p-5 font-bold text-[35px] xs:text-[40px]">
+                NEWS
+              </div>
+            </WhiteBoldText>
+          </a>
         </GradientCard>
         <GradientCard
           gradientColors={[

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../Components/Header";
 import AppBar from "../Components/AppBar";
 import CoinSelecter from "../Components/Trade/CoinSelecter";
+import GrayCard from "../Components/Custom/GrayCard";
 
 function TradingView() {
   const [walletConnected, setWalletConnected] = useState(false);
@@ -61,18 +62,18 @@ function TradingView() {
 
         {/* trading grahp */}
         <div className="px-2 w-full ">
-          <div className="bg-[#1f2937] h-[408px] w-full rounded-3xl"></div>
+          <GrayCard className="h-[408px] w-full rounded-3xl"></GrayCard>
         </div>
 
         {/* wallet connection */}
         {walletConnected === false ? (
           <div className="px-2 my-2 w-full">
-            <div className="bg-[#1f2937] text-[#898B94] rounded-3xl w-full space-y-5 text-center py-12 ">
+            <GrayCard className="text-[#898B94] rounded-3xl w-full space-y-5 text-center py-12 ">
               <p>Connect wallet to buy this coin </p>
               <button className="p-2 bg-[#2E313E] border-[1px] hover:text-white hover:bg-[#484b58] border-[#444652] rounded-lg">
                 CONNECT WALLET
               </button>
-            </div>
+            </GrayCard>
           </div>
         ) : (
           <div className="w-full text-center h-full pt-16">

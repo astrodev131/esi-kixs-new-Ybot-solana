@@ -7,9 +7,7 @@ import {
 } from "../Components/Custom/Text";
 import GrayCard from "../Components/Custom/GrayCard";
 import {
-  Blank,
   BrownGradientCardFirm,
-  Mypick,
   GrayGradientCardFirm,
   DarkBrownGradientCardFirm,
 } from "../Components/Earn/GradientCard";
