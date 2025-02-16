@@ -25,6 +25,7 @@ import Alert from "../Components/Alert";
 import Header from "../Components/Header";
 import Devider from "../Components/Devider";
 import GrayCard from "../Components/Custom/GrayCard";
+import TabList from "../Components/Custom/TabList";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -217,8 +218,8 @@ function HomePage() {
             <p dangerouslySetInnerHTML={{ __html: currentState.alert }} />
           </div>
         </Alert>
-        <div className="my-4 w-full">
-          <div className="py-2 flex gap-4">
+        <div className="my-4 w-full relative">
+          <TabList>
             {HomeData.map((value, index) => (
               <div
                 key={index}
@@ -232,9 +233,8 @@ function HomePage() {
                 {value.title}
               </div>
             ))}
-          </div>
+          </TabList>
         </div>
-        <Devider className={"mt-2"}></Devider>
         {currentState.title === "Rules" && (
           <div className="text-xl text-center pb-2">
             Meme Coin Arena - Rules 🚀

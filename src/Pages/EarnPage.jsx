@@ -7,7 +7,8 @@ import {
   RedText,
 } from "../Components/Custom/Text";
 import GrayCard from "../Components/Custom/GrayCard";
-import React from "react";
+// import { useEffect, useRef, useState, React } from "react";
+import React, { useEffect } from "react";
 import {
   Blank,
   BrownGradientCardFirm,
@@ -18,6 +19,8 @@ import { GradientCard } from "../Components/Earn/GradientCard";
 import Devider from "../Components/Devider";
 import Header from "../Components/Header";
 import AppBar from "../Components/AppBar";
+import TabList from "../Components/Custom/TabList";
+import { useRef, useState } from "react";
 
 export default function EarnPage() {
   const [activeTab, setActiveTab] = React.useState("winners");
@@ -204,6 +207,48 @@ export default function EarnPage() {
       /* Rectangle 123 */
     ),
   };
+
+  const parentRef = useRef(null);
+  const childRef = useRef(null);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup to prevent memory leaks
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  useEffect(() => {
+    function checkOverflow() {
+      if (parentRef.current && childRef.current) {
+        setIsOverflowing(
+          childRef.current.scrollWidth > parentRef.current.clientWidth
+        );
+      }
+    }
+
+    checkOverflow(); // Run on mount
+
+    window.addEventListener("resize", checkOverflow);
+
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, [screenWidth]);
+
+  const scrollRight = () => {
+    if (childRef.current) {
+      childRef.current.scrollBy({ left: 100, behavior: "smooth" });
+    }
+  };
+
+  const scrollLeft = () => {
+    if (childRef.current) {
+      childRef.current.scrollBy({ left: -100, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="page">
       <Header />
@@ -225,28 +270,57 @@ export default function EarnPage() {
           </CyanButton>
         </div>
         <GrayCard className={"w-full"}>
-          <div>
+          <div ref={parentRef} className="relative">
             <div className="text-xl text-center mb-3 font-bold">
               Simulation Results
             </div>
-            <nav>
-              <ul className="flex text-[#383A47] font-bold justify-around max-w-[600px] overflow-x-auto whitespace-nowrap">
+            {isOverflowing ? (
+              <>
+                <button
+                  onClick={scrollLeft}
+                  className="left-1 top-11 absolute text-gray-400 hover:text-white p-3 rounded-full bg-[#090c1a2d]"
+                >
+                  {"<"}
+                </button>
+                <button
+                  onClick={scrollRight}
+                  className="right-1 top-11 absolute text-gray-400 hover:text-white p-3 rounded-full bg-[#090c1a33]"
+                >
+                  {">"}
+                </button>
+              </>
+            ) : (
+              <></>
+            )}
+            {/* <nav>
+              <ul className="flex text-[#383A47] font-bold justify-around max-w-[600px] overflow-x-auto whitespace-nowrap"> */}
+            <div
+              ref={childRef}
+              className={`relative pt-2 overflow-auto scrollbar-hidden ${
+                isOverflowing ? "mx-8" : ""
+              }`}
+            >
+              <TabList
+                classData={"w-max"}
+                scrollLeft={isOverflowing && scrollLeft}
+                scrollRight={isOverflowing && scrollRight}
+              >
                 {["winners", "my-bets", "trading-day-summary"].map((tab) => (
-                  <li key={tab} className="px-4 py-2">
-                    <a
-                      href={`#${tab}`}
-                      className={`hover:text-[#C0C2C4] ${
-                        activeTab === tab ? "text-[#C0C2C4]" : ""
-                      }`}
-                      onClick={() => setActiveTab(tab)}
-                    >
-                      <div>{tab.replace(/-/g, " ")}</div>
-                    </a>
-                  </li>
+                  <a
+                    key={tab}
+                    href={`#${tab}`}
+                    className={`hover:text-[#C0C2C4] ${
+                      activeTab === tab ? "text-[#ffffff]" : "text-[#545458]"
+                    }`}
+                    onClick={() => setActiveTab(tab)}
+                  >
+                    <div className="w-max">{tab.replace(/-/g, " ")}</div>
+                  </a>
                 ))}
-              </ul>
-            </nav>
-            <Devider></Devider>
+              </TabList>
+            </div>
+            {/* </ul>
+            </nav> */}
             <div>{tabContent[activeTab]}</div>
           </div>
         </GrayCard>

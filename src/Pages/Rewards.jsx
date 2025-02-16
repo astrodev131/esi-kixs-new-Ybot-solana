@@ -6,6 +6,7 @@ import AppBar from "../Components/AppBar";
 import Header from "../Components/Header";
 import Devider from "../Components/Devider";
 import GrayCard from "../Components/Custom/GrayCard";
+import TabList from "../Components/Custom/TabList";
 
 const Rewards = () => {
   const [status, setStatus] = useState("tasks");
@@ -99,7 +100,7 @@ const Rewards = () => {
             </div>
           </div>
           <div className="px-[17px]">
-            <div className="py-[8px] text-lg flex justify-around">
+            <TabList classData="justify-around">
               <span
                 className={`text-bold cursor-pointer ${
                   status === "tasks" ? "text-white" : "text-[#AFB1B5]"
@@ -136,8 +137,7 @@ const Rewards = () => {
                   Leaderboard
                 </Link>
               </DarkGrayText>
-            </div>
-            <Devider></Devider>
+            </TabList>
           </div>
         </header>
         <section className={`body px-4 ${status === "tasks" ? "" : "hidden"}`}>

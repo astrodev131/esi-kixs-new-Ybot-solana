@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import AppBar from "../Components/AppBar";
 import Alert from "../Components/Alert";
 import { useParams } from "react-router-dom";
+import TabList from "../Components/Custom/TabList";
 const NewsData = [
   {
     title: "Whales",
@@ -88,11 +89,11 @@ const NewsItemPage = () => {
           >
             <button
               onClick={scrollLeft}
-              className="left-1 -top-1 absolute text-gray-400 hover:text-white p-3 rounded-full bg-[#090c1a2d]"
+              className="left-1 top-1 absolute text-gray-400 hover:text-white p-3 rounded-full bg-[#090c1a2d]"
             >
               {"<"}
             </button>
-            <div className="flex">
+            <TabList>
               {NewsData.map((value, index) => (
                 <a
                   key={index}
@@ -105,10 +106,10 @@ const NewsItemPage = () => {
                   <p>{value.title}</p>
                 </a>
               ))}
-            </div>
+            </TabList>
             <button
               onClick={scrollRight}
-              className="right-1 -top-1 absolute text-gray-400 hover:text-white p-3 rounded-full bg-[#090c1a33]"
+              className="right-1 top-1 absolute text-gray-400 hover:text-white p-3 rounded-full bg-[#090c1a33]"
             >
               {">"}
             </button>
